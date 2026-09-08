@@ -486,7 +486,7 @@
 };
 
 &gpu_zap_shader {
-	firmware-name = "qcom/x1e80100/ASUSTeK/vivobook-s15/qcdxkmsuc8380.mbn";
+	firmware-name = "qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn";
 };
 
 &i2c0 {
@@ -712,15 +712,15 @@
 };
 
 &remoteproc_adsp {
-	firmware-name = "qcom/x1e80100/ASUSTeK/vivobook-s15/qcadsp8380.mbn",
-			"qcom/x1e80100/ASUSTeK/vivobook-s15/adsp_dtbs.elf";
+	firmware-name = "qcom/x1p42100/ASUSTeK/vivobook-s14/qcadsp8380.mbn",
+			"qcom/x1p42100/ASUSTeK/vivobook-s14/adsp_dtbs.elf";
 
 	status = "okay";
 };
 
 &remoteproc_cdsp {
-	firmware-name = "qcom/x1e80100/ASUSTeK/vivobook-s15/qccdsp8380.mbn",
-			"qcom/x1e80100/ASUSTeK/vivobook-s15/cdsp_dtbs.elf";
+	firmware-name = "qcom/x1p42100/ASUSTeK/vivobook-s14/qccdsp8380.mbn",
+			"qcom/x1p42100/ASUSTeK/vivobook-s14/cdsp_dtbs.elf";
 
 	status = "okay";
 };
