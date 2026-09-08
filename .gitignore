@@ -2,3 +2,5 @@ MSDM*
 firmware/
 *.mbn
 *.bin
+linux/
+linux-x1e80100-zenbook-a14/
