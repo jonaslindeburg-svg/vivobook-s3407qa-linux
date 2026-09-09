@@ -1,0 +1,1802 @@
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x512f0011]
+[    0.000000] Linux version 7.0.0-30-generic (buildd@bos03-arm64-054) (aarch64-linux-gnu-gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0, GNU ld (GNU Binutils for Ubuntu) 2.46) #30-Ubuntu SMP PREEMPT_DYNAMIC Fri Jul 31 18:09:26 UTC 2026 (Ubuntu 7.0.0-30.30-generic 7.0.12)
+[    0.000000] KASLR enabled
+[    0.000000] Machine model: ASUS Vivobook S14 (S3407QA)
+[    0.000000] efi: EFI v2.9 by INSYDE Corp.
+[    0.000000] efi: SMBIOS=0xd444b000 SMBIOS 3.0=0xd4448000 TPMFinalLog=0xd46c9000 ACPI 2.0=0xd47bc018 MEMATTR=0xd09e0018 ESRT=0xcef41b98 MOKvar=0xc2f4a000 TPMEventLog=0xd4757018 INITRD=0xc4834618 RNG=0xd47bc998 MEMRESERVE=0xc4834098 
+[    0.000000] random: crng init done
+[    0.000000] secureboot: Secure boot disabled
+[    0.000000] esrt: Reserving ESRT space from 0x00000000cef41b98 to 0x00000000cef41c48.
+[    0.000000] Reserved memory: created CMA memory pool at 0x0000000ff8000000, size 128 MiB
+[    0.000000] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: 0x0000000ff8000000..0x0000000fffffffff (131072 KiB) map reusable linux,cma
+[    0.000000] OF: reserved mem: 0x0000000080000000..0x00000000807fffff (8192 KiB) nomap non-reusable gunyah-hyp@80000000
+[    0.000000] OF: reserved mem: 0x0000000080800000..0x00000000809fffff (2048 KiB) nomap non-reusable hyp-elf-package@80800000
+[    0.000000] OF: reserved mem: 0x0000000080a00000..0x0000000080dfffff (4096 KiB) nomap non-reusable ncc@80a00000
+[    0.000000] OF: reserved mem: 0x0000000080e00000..0x0000000080e3ffff (256 KiB) nomap non-reusable cpucp-log@80e00000
+[    0.000000] OF: reserved mem: 0x0000000080e40000..0x000000008137ffff (5376 KiB) nomap non-reusable cpucp@80e40000
+[    0.000000] OF: reserved mem: 0x0000000081380000..0x00000000813fffff (512 KiB) nomap non-reusable reserved-region@81380000
+[    0.000000] OF: reserved mem: 0x0000000081400000..0x000000008159ffff (1664 KiB) nomap non-reusable tags-region@81400000
+[    0.000000] OF: reserved mem: 0x0000000081a00000..0x0000000081a3ffff (256 KiB) nomap non-reusable xbl-dtlog@81a00000
+[    0.000000] OF: reserved mem: 0x0000000081a40000..0x0000000081bfffff (1792 KiB) nomap non-reusable xbl-ramdump@81a40000
+[    0.000000] OF: reserved mem: 0x0000000081c00000..0x0000000081c5ffff (384 KiB) nomap non-reusable aop-image@81c00000
+[    0.000000] OF: reserved mem: 0x0000000081c60000..0x0000000081c7ffff (128 KiB) nomap non-reusable aop-cmd-db@81c60000
+[    0.000000] OF: reserved mem: 0x0000000081c80000..0x0000000081c9ffff (128 KiB) nomap non-reusable aop-config@81c80000
+[    0.000000] OF: reserved mem: 0x0000000081ca0000..0x0000000081cdffff (256 KiB) nomap non-reusable tme-crash-dump@81ca0000
+[    0.000000] OF: reserved mem: 0x0000000081ce0000..0x0000000081ce3fff (16 KiB) nomap non-reusable tme-log@81ce0000
+[    0.000000] OF: reserved mem: 0x0000000081ce4000..0x0000000081cf3fff (64 KiB) nomap non-reusable uefi-log@81ce4000
+[    0.000000] OF: reserved mem: 0x0000000081cff000..0x0000000081cfffff (4 KiB) nomap non-reusable secdata-apss@81cff000
+[    0.000000] OF: reserved mem: 0x0000000081e00000..0x0000000081efffff (1024 KiB) nomap non-reusable pdp-ns-shared@81e00000
+[    0.000000] OF: reserved mem: 0x0000000081f00000..0x0000000081f0ffff (64 KiB) nomap non-reusable gpu-prr@81f00000
+[    0.000000] OF: reserved mem: 0x0000000081f10000..0x0000000081f1ffff (64 KiB) nomap non-reusable tpm-control@81f10000
+[    0.000000] OF: reserved mem: 0x0000000081f20000..0x0000000081f2ffff (64 KiB) nomap non-reusable usb-ucsi-shared@81f20000
+[    0.000000] OF: reserved mem: 0x0000000081f30000..0x0000000081f35fff (24 KiB) nomap non-reusable pld-pep@81f30000
+[    0.000000] OF: reserved mem: 0x0000000081f36000..0x0000000081f36fff (4 KiB) nomap non-reusable pld-gmu@81f36000
+[    0.000000] OF: reserved mem: 0x0000000081f37000..0x0000000081f37fff (4 KiB) nomap non-reusable pld-pdp@81f37000
+[    0.000000] OF: reserved mem: 0x0000000082700000..0x00000000827fffff (1024 KiB) nomap non-reusable tz-stat@82700000
+[    0.000000] OF: reserved mem: 0x0000000082800000..0x00000000833fffff (12288 KiB) nomap non-reusable xbl-tmp-buffer@82800000
+[    0.000000] OF: reserved mem: 0x0000000084b00000..0x00000000852fffff (8192 KiB) nomap non-reusable adsp-rpc-remote-heap@84b00000
+[    0.000000] OF: reserved mem: 0x0000000085300000..0x000000008537ffff (512 KiB) nomap non-reusable spu-secure-shared-memory@85300000
+[    0.000000] OF: reserved mem: 0x00000000866c0000..0x00000000866fffff (256 KiB) nomap non-reusable adsp-boot-dtb@866c0000
+[    0.000000] OF: reserved mem: 0x0000000086700000..0x0000000086afffff (4096 KiB) nomap non-reusable spss-region@86700000
+[    0.000000] OF: reserved mem: 0x0000000086b00000..0x00000000876fffff (12288 KiB) nomap non-reusable adsp-boot@86b00000
+[    0.000000] OF: reserved mem: 0x0000000087700000..0x0000000087dfffff (7168 KiB) nomap non-reusable video@87700000
+[    0.000000] OF: reserved mem: 0x0000000087e00000..0x000000008b7fffff (59392 KiB) nomap non-reusable adspslpi@87e00000
+[    0.000000] OF: reserved mem: 0x000000008b800000..0x000000008b87ffff (512 KiB) nomap non-reusable q6-adsp-dtb@8b800000
+[    0.000000] OF: reserved mem: 0x000000008b900000..0x000000008d8fffff (32768 KiB) nomap non-reusable cdsp@8b900000
+[    0.000000] OF: reserved mem: 0x000000008d900000..0x000000008d97ffff (512 KiB) nomap non-reusable q6-cdsp-dtb@8d900000
+[    0.000000] OF: reserved mem: 0x000000008d9fe000..0x000000008d9fffff (8 KiB) nomap non-reusable gpu-microcode@8d9fe000
+[    0.000000] OF: reserved mem: 0x000000008da00000..0x000000008e0fffff (7168 KiB) nomap non-reusable cvp@8da00000
+[    0.000000] OF: reserved mem: 0x000000008e100000..0x000000008e8fffff (8192 KiB) nomap non-reusable camera@8e100000
+[    0.000000] OF: reserved mem: 0x000000008e900000..0x000000008effffff (7168 KiB) nomap non-reusable av1-encoder@8e900000
+[    0.000000] OF: reserved mem: 0x000000008f000000..0x000000008f9fffff (10240 KiB) nomap non-reusable reserved-region@8f000000
+[    0.000000] OF: reserved mem: 0x000000008fa00000..0x00000000912fffff (25600 KiB) nomap non-reusable wpss@8fa00000
+[    0.000000] OF: reserved mem: 0x0000000091300000..0x000000009137ffff (512 KiB) nomap non-reusable q6-wpss-dtb@91300000
+[    0.000000] OF: reserved mem: 0x00000000d8000000..0x00000000d803ffff (256 KiB) nomap non-reusable xbl-sc@d8000000
+[    0.000000] OF: reserved mem: 0x00000000d8040000..0x00000000d80dffff (640 KiB) nomap non-reusable reserved-region@d8040000
+[    0.000000] OF: reserved mem: 0x00000000d80e0000..0x00000000d85fffff (5248 KiB) nomap non-reusable qtee@d80e0000
+[    0.000000] OF: reserved mem: 0x00000000d8600000..0x00000000e0ffffff (141312 KiB) nomap non-reusable ta@d8600000
+[    0.000000] OF: reserved mem: 0x00000000e1000000..0x00000000e369ffff (39552 KiB) nomap non-reusable tags@e1000000
+[    0.000000] OF: reserved mem: 0x00000000ff800000..0x00000000ffdfffff (6144 KiB) nomap non-reusable llcc-lpi@ff800000
+[    0.000000] OF: reserved mem: 0x00000000ffe00000..0x00000000ffffffff (2048 KiB) nomap non-reusable smem@ffe00000
+[    0.000000] NUMA: Faking a node at [mem 0x0000000080800000-0x0000000fffffffff]
+[    0.000000] NODE_DATA(0) allocated [mem 0xff4011480-0xff401703f]
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.3
+[    0.000000] psci: OSI mode supported.
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000080800000-0x00000000ffffffff]
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   [mem 0x0000000100000000-0x0000000fffffffff]
+[    0.000000]   Device   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000080800000-0x0000000080dfffff]
+[    0.000000]   node   0: [mem 0x00000000815a0000-0x00000000819fffff]
+[    0.000000]   node   0: [mem 0x0000000081a00000-0x0000000081a3ffff]
+[    0.000000]   node   0: [mem 0x0000000081d00000-0x0000000081dfffff]
+[    0.000000]   node   0: [mem 0x0000000081f00000-0x0000000081f37fff]
+[    0.000000]   node   0: [mem 0x0000000081f38000-0x00000000826fffff]
+[    0.000000]   node   0: [mem 0x0000000082800000-0x00000000833fffff]
+[    0.000000]   node   0: [mem 0x0000000083400000-0x0000000083efffff]
+[    0.000000]   node   0: [mem 0x0000000083f00000-0x0000000083ffffff]
+[    0.000000]   node   0: [mem 0x0000000084000000-0x0000000084afffff]
+[    0.000000]   node   0: [mem 0x0000000085380000-0x00000000866bffff]
+[    0.000000]   node   0: [mem 0x0000000091480000-0x00000000a7f00fff]
+[    0.000000]   node   0: [mem 0x00000000a7f01000-0x00000000a7f01fff]
+[    0.000000]   node   0: [mem 0x00000000a7f02000-0x00000000a7f04fff]
+[    0.000000]   node   0: [mem 0x00000000a7f05000-0x00000000a7f0cfff]
+[    0.000000]   node   0: [mem 0x00000000a7f0d000-0x00000000c2f49fff]
+[    0.000000]   node   0: [mem 0x00000000c2f4a000-0x00000000c2f4afff]
+[    0.000000]   node   0: [mem 0x00000000c2f4b000-0x00000000c3228fff]
+[    0.000000]   node   0: [mem 0x00000000c3229000-0x00000000c32a8fff]
+[    0.000000]   node   0: [mem 0x00000000c32a9000-0x00000000c35c6fff]
+[    0.000000]   node   0: [mem 0x00000000c35c7000-0x00000000c365dfff]
+[    0.000000]   node   0: [mem 0x00000000c365e000-0x00000000c3880fff]
+[    0.000000]   node   0: [mem 0x00000000c3881000-0x00000000c3ab1fff]
+[    0.000000]   node   0: [mem 0x00000000c3ab2000-0x00000000d4234fff]
+[    0.000000]   node   0: [mem 0x00000000d4235000-0x00000000d46e0fff]
+[    0.000000]   node   0: [mem 0x00000000d46e1000-0x00000000d7ffffff]
+[    0.000000]   node   0: [mem 0x00000000de5b0000-0x00000000e369ffff]
+[    0.000000]   node   0: [mem 0x00000000e36a0000-0x00000000e47fffff]
+[    0.000000]   node   0: [mem 0x00000000e4800000-0x00000000e69bffff]
+[    0.000000]   node   0: [mem 0x00000000e69c0000-0x00000000f84fffff]
+[    0.000000]   node   0: [mem 0x0000000880000000-0x0000000fffffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000080800000-0x0000000fffffffff]
+[    0.000000] On node 0, zone DMA: 2048 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 1952 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 704 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 256 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 256 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 2176 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 11712 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 26032 pages in unavailable ranges
+[    0.000000] On node 0, zone Normal: 31488 pages in unavailable ranges
+[    0.000000] percpu: Embedded 57 pages/cpu s110040 r8192 d115240 u233472
+[    0.000000] pcpu-alloc: s110040 r8192 d115240 u233472 alloc=57*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[    0.000000] Detected PIPT I-cache on CPU0
+[    0.000000] CPU features: SYS_ID_AA64ISAR1_EL1[31:28]: already set to 0
+[    0.000000] CPU features: SYS_ID_AA64ISAR1_EL1[27:24]: forced to 0
+[    0.000000] CPU features: SYS_ID_AA64ISAR1_EL1[11:8]: already set to 0
+[    0.000000] CPU features: SYS_ID_AA64ISAR1_EL1[7:4]: forced to 0
+[    0.000000] CPU features: SYS_ID_AA64ISAR2_EL1[15:12]: already set to 0
+[    0.000000] CPU features: SYS_ID_AA64ISAR2_EL1[11:8]: already set to 0
+[    0.000000] CPU features: detected: GICv3 CPU interface
+[    0.000000] CPU features: detected: HCRX_EL2 register
+[    0.000000] CPU features: detected: Spectre-v4
+[    0.000000] CPU features: detected: Spectre-BHB
+[    0.000000] CPU features: detected: Broken CNTVOFF_EL2
+[    0.000000] alternatives: applying boot alternatives
+[    0.000000] Kernel command line: BOOT_IMAGE=/casper/vmlinuz clk_ignore_unused pd_ignore_unused arm64.nopauth --- console=tty0
+[    0.000000] Unknown kernel command line parameters "---", will be passed to user space.
+[    0.000000] printk: log buffer data + meta data: 262144 + 1114112 = 1376256 bytes
+[    0.000000] Dentry cache hash table entries: 4194304 (order: 13, 33554432 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 2097152 (order: 12, 16777216 bytes, linear)
+[    0.000000] software IO TLB: area num 8.
+[    0.000000] software IO TLB: mapped [mem 0x00000000f4500000-0x00000000f8500000] (64MB)
+[    0.000000] Fallback order for Node 0: 0 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 8279216
+[    0.000000] Policy zone: Normal
+[    0.000000] mem auto-init: stack:all(zero), heap alloc:on, heap free:off
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] ftrace: allocating 70811 entries in 278 pages
+[    0.000000] ftrace: allocated 278 pages with 4 groups
+[    0.000000] Dynamic Preempt: lazy
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=512 to nr_cpu_ids=8.
+[    0.000000] 	Trampoline variant of Tasks RCU enabled.
+[    0.000000] 	Rude variant of Tasks RCU enabled.
+[    0.000000] 	Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=8
+[    0.000000] RCU Tasks: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=8.
+[    0.000000] RCU Tasks Rude: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=8.
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: 988 SPIs implemented
+[    0.000000] GICv3: 0 Extended SPIs implemented
+[    0.000000] Root IRQ handler: gic_handle_irq
+[    0.000000] GICv3: GICv3 features: 16 PPIs, DirectLPI
+[    0.000000] GICv3: GICD_CTLR.DS=1, SCR_EL3.FIQ=0
+[    0.000000] GICv3: Enabling SGIs without active state
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x0000000017080000
+[    0.000000] ITS [mem 0x17040000-0x1707ffff]
+[    0.000000] ITS@0x0000000017040000: Devices Table too large, reduce ids 32->22
+[    0.000000] ITS@0x0000000017040000: Devices too large, reduce ITS pages 8192->256
+[    0.000000] ITS@0x0000000017040000: allocated 131072 Devices @880400000 (indirect, esz 8, psz 4K, shr 1)
+[    0.000000] ITS@0x0000000017040000: allocated 4096 Interrupt Collections @8803a6000 (flat, esz 1, psz 4K, shr 1)
+[    0.000000] GICv3: using LPI property table @0x00000008803c0000
+[    0.000000] GICv3: CPU0: using allocated LPI pending table @0x00000008803e0000
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] arch_timer: cp15 timer running at 19.20MHz (virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.000000] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    0.000074] arm-pv: using stolen time PV
+[    0.000190] Console: colour dummy device 80x25
+[    0.000194] printk: legacy console [tty0] enabled
+[    0.000557] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=19200)
+[    0.000562] pid_max: default: 32768 minimum: 301
+[    0.000689] landlock: Up and running.
+[    0.000691] Yama: becoming mindful.
+[    0.000818] AppArmor: AppArmor initialized
+[    0.000821] AppArmor: AppArmor secmark mediation reserved: ready to be enabled
+[    0.000919] Mount-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.000930] Mountpoint-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.001052] VFS: Finished mounting rootfs on nullfs
+[    0.001608] rcu: Hierarchical SRCU implementation.
+[    0.001612] rcu: 	Max phase no-delay instances is 400.
+[    0.001669] Timer migration: 1 hierarchy levels; 8 children per group; 1 crossnode level
+[    0.001961] fsl-mc MSI: msi-controller@17040000 domain created
+[    0.002610] Remapping and enabling EFI services.
+[    0.002757] smp: Bringing up secondary CPUs ...
+[    0.002973] Detected PIPT I-cache on CPU1
+[    0.002997] GICv3: CPU1: found redistributor 100 region 0:0x00000000170c0000
+[    0.003058] GICv3: CPU1: using allocated LPI pending table @0x00000008803f0000
+[    0.003101] CPU1: Booted secondary processor 0x0000000100 [0x512f0011]
+[    0.003720] Detected PIPT I-cache on CPU2
+[    0.003740] GICv3: CPU2: found redistributor 200 region 0:0x0000000017100000
+[    0.003802] GICv3: CPU2: using allocated LPI pending table @0x0000000880500000
+[    0.003843] CPU2: Booted secondary processor 0x0000000200 [0x512f0011]
+[    0.004431] Detected PIPT I-cache on CPU3
+[    0.004451] GICv3: CPU3: found redistributor 300 region 0:0x0000000017140000
+[    0.004514] GICv3: CPU3: using allocated LPI pending table @0x0000000880510000
+[    0.004556] CPU3: Booted secondary processor 0x0000000300 [0x512f0011]
+[    0.006964] Detected PIPT I-cache on CPU4
+[    0.007018] GICv3: CPU4: found redistributor 10000 region 0:0x0000000017180000
+[    0.007097] GICv3: CPU4: using allocated LPI pending table @0x0000000880520000
+[    0.007156] CPU4: Booted secondary processor 0x0000010000 [0x511f0011]
+[    0.007880] Detected PIPT I-cache on CPU5
+[    0.007903] GICv3: CPU5: found redistributor 10100 region 0:0x00000000171c0000
+[    0.007964] GICv3: CPU5: using allocated LPI pending table @0x0000000880530000
+[    0.008007] CPU5: Booted secondary processor 0x0000010100 [0x511f0011]
+[    0.008328] Detected PIPT I-cache on CPU6
+[    0.008351] GICv3: CPU6: found redistributor 10200 region 0:0x0000000017200000
+[    0.008413] GICv3: CPU6: using allocated LPI pending table @0x0000000880540000
+[    0.008456] CPU6: Booted secondary processor 0x0000010200 [0x511f0011]
+[    0.009112] Detected PIPT I-cache on CPU7
+[    0.009137] GICv3: CPU7: found redistributor 10300 region 0:0x0000000017240000
+[    0.009198] GICv3: CPU7: using allocated LPI pending table @0x0000000880550000
+[    0.009241] CPU7: Booted secondary processor 0x0000010300 [0x511f0011]
+[    0.009304] smp: Brought up 1 node, 8 CPUs
+[    0.009356] SMP: Total of 8 processors activated.
+[    0.009358] CPU: All CPU(s) started at EL1
+[    0.009365] CPU features: detected: Branch Target Identification
+[    0.009368] CPU features: detected: ARMv8.4 Translation Table Level
+[    0.009372] CPU features: detected: Instruction cache invalidation not required for I/D coherence
+[    0.009375] CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+[    0.009379] CPU features: detected: Common not Private translations
+[    0.009381] CPU features: detected: CRC32 instructions
+[    0.009384] CPU features: detected: Data cache clean to Point of Deep Persistence
+[    0.009387] CPU features: detected: Data cache clean to Point of Persistence
+[    0.009389] CPU features: detected: Data independent timing control (DIT)
+[    0.009392] CPU features: detected: E0PD
+[    0.009394] CPU features: detected: Enhanced Counter Virtualization
+[    0.009396] CPU features: detected: Enhanced Counter Virtualization (CNTPOFF)
+[    0.009399] CPU features: detected: Enhanced Privileged Access Never
+[    0.009401] CPU features: detected: Enhanced Virtualization Traps
+[    0.009404] CPU features: detected: Fine Grained Traps
+[    0.009408] CPU features: detected: RCpc load-acquire (LDAPR)
+[    0.009411] CPU features: detected: LSE atomic instructions
+[    0.009413] CPU features: detected: Privileged Access Never
+[    0.009415] CPU features: detected: PMUv3
+[    0.009417] CPU features: detected: RAS Extension Support
+[    0.009420] CPU features: detected: RASv1p1 Extension Support
+[    0.009422] CPU features: detected: Random Number Generator
+[    0.009424] CPU features: detected: Speculation barrier (SB)
+[    0.009426] CPU features: detected: Stage-2 Force Write-Back
+[    0.009429] CPU features: detected: TLB range maintenance instructions
+[    0.009431] CPU features: detected: XNX
+[    0.009434] CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+[    0.009488] alternatives: applying system-wide alternatives
+[    0.010858] CPU features: detected: Activity Monitors Unit (AMU) on CPU0-7
+[    0.011141] Memory: 28788352K/33116864K available (27776K kernel code, 6298K rwdata, 20104K rodata, 15168K init, 1302K bss, 4181620K reserved, 131072K cma-reserved)
+[    0.011369] devtmpfs: initialized
+[    0.019251] setend instruction emulation is not supported on this system
+[    0.019398] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.019412] posixtimers hash table entries: 4096 (order: 4, 65536 bytes, linear)
+[    0.019424] futex hash table entries: 2048 (131072 bytes on 1 NUMA nodes, total 128 KiB, linear).
+[    0.019743] 2G module region forced by RANDOMIZE_MODULE_REGION_FULL
+[    0.019746] 0 pages in range for non-PLT usage
+[    0.019747] 506560 pages in range for PLT usage
+[    0.020505] SMBIOS 3.6.0 present.
+[    0.020513] DMI: ASUSTeK COMPUTER INC. ASUS Vivobook S 14 S3407QA_S3407QA/S3407QA, BIOS S3407QA.311 05/22/2026
+[    0.020526] DMI: Memory slots populated: 1/1
+[    0.021227] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.021815] DMA: preallocated 4096 KiB GFP_KERNEL pool for atomic allocations
+[    0.022144] DMA: preallocated 4096 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.022154] audit: initializing netlink subsys (disabled)
+[    0.022228] audit: type=2000 audit(0.019:1): state=initialized audit_enabled=0 res=1
+[    0.023075] thermal_sys: Registered thermal governor 'fair_share'
+[    0.023076] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.023079] thermal_sys: Registered thermal governor 'step_wise'
+[    0.023081] thermal_sys: Registered thermal governor 'user_space'
+[    0.023084] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.023103] cpuidle: using governor ladder
+[    0.023115] cpuidle: using governor menu
+[    0.023178] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.023234] ASID allocator initialised with 65536 entries
+[    0.023476] Serial: AMBA PL011 UART driver
+[    0.024365] CPUidle PSCI: Initialized CPU PM domain topology using OSI mode
+[    0.027178] /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1bfc000
+[    0.027183] /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1c0e000
+[    0.027265] /soc@0/phy@fd5000: Fixed dependency cycle(s) with /soc@0/usb@a6f8800/usb@a600000
+[    0.027283] /soc@0/phy@fda000: Fixed dependency cycle(s) with /soc@0/usb@a8f8800/usb@a800000
+[    0.027304] /soc@0/phy@1bfc000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    0.027321] /soc@0/phy@1c0e000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    0.027409] /soc@0/usb@a6f8800/usb@a600000: Fixed dependency cycle(s) with /soc@0/phy@fd5000
+[    0.027425] /soc@0/usb@a8f8800/usb@a800000: Fixed dependency cycle(s) with /soc@0/phy@fda000
+[    0.027456] /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@aea0000
+[    0.027477] /soc@0/display-subsystem@ae00000/displayport-controller@aea0000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@aea0000/aux-bus/panel
+[    0.027496] /soc@0/display-subsystem@ae00000/displayport-controller@aea0000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[    0.027538] /soc@0/display-subsystem@ae00000/displayport-controller@aea0000/aux-bus/panel: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@aea0000
+[    0.027597] /soc@0/stm@10002000: Fixed dependency cycle(s) with /soc@0/funnel@10041000
+[    0.027620] /soc@0/tpda@10004000: Fixed dependency cycle(s) with /soc@0/funnel@10041000
+[    0.027624] /soc@0/tpda@10004000: Fixed dependency cycle(s) with /soc@0/tpdm@1000f000
+[    0.027648] /soc@0/tpdm@1000f000: Fixed dependency cycle(s) with /soc@0/tpda@10004000
+[    0.027670] /soc@0/funnel@10041000: Fixed dependency cycle(s) with /soc@0/funnel@10045000
+[    0.027674] /soc@0/funnel@10041000: Fixed dependency cycle(s) with /soc@0/stm@10002000
+[    0.027679] /soc@0/funnel@10041000: Fixed dependency cycle(s) with /soc@0/tpda@10004000
+[    0.027690] /soc@0/funnel@10042000: Fixed dependency cycle(s) with /soc@0/funnel@10045000
+[    0.027705] /soc@0/funnel@10042000: Fixed dependency cycle(s) with /soc@0/funnel@10c2c000
+[    0.027711] /soc@0/funnel@10042000: Fixed dependency cycle(s) with /soc@0/funnel@10ac5000
+[    0.027716] /soc@0/funnel@10042000: Fixed dependency cycle(s) with /soc@0/funnel@10cc5000
+[    0.027725] /soc@0/funnel@10045000: Fixed dependency cycle(s) with /soc@0/funnel@10b04000
+[    0.027742] /soc@0/funnel@10045000: Fixed dependency cycle(s) with /soc@0/funnel@10042000
+[    0.027748] /soc@0/funnel@10045000: Fixed dependency cycle(s) with /soc@0/funnel@10041000
+[    0.027771] /soc@0/tpdm@10800000: Fixed dependency cycle(s) with /soc@0/tpda@10c3c000
+[    0.027794] /soc@0/tpdm@1082c000: Fixed dependency cycle(s) with /soc@0/tpda@10c2b000
+[    0.027817] /soc@0/tpdm@10841000: Fixed dependency cycle(s) with /soc@0/tpda@10c2b000
+[    0.027840] /soc@0/tpdm@10844000: Fixed dependency cycle(s) with /soc@0/funnel@10846000
+[    0.027863] /soc@0/funnel@10846000: Fixed dependency cycle(s) with /soc@0/tpda@10c2b000
+[    0.027867] /soc@0/funnel@10846000: Fixed dependency cycle(s) with /soc@0/tpdm@10844000
+[    0.027894] /soc@0/tpdm@10ac1000: Fixed dependency cycle(s) with /soc@0/tpda@10ac4000
+[    0.027916] /soc@0/tpda@10ac4000: Fixed dependency cycle(s) with /soc@0/funnel@10ac5000
+[    0.027921] /soc@0/tpda@10ac4000: Fixed dependency cycle(s) with /soc@0/tpdm@10ac1000
+[    0.027943] /soc@0/funnel@10ac5000: Fixed dependency cycle(s) with /soc@0/funnel@10042000
+[    0.027949] /soc@0/funnel@10ac5000: Fixed dependency cycle(s) with /soc@0/tpda@10ac4000
+[    0.027955] /soc@0/funnel@10b04000: Fixed dependency cycle(s) with /soc@0/tmc@10b05000
+[    0.027974] /soc@0/funnel@10b04000: Fixed dependency cycle(s) with /soc@0/funnel@10045000
+[    0.027980] /soc@0/funnel@10b04000: Fixed dependency cycle(s) with /soc@0/tpda@10b08000
+[    0.027986] /soc@0/tmc@10b05000: Fixed dependency cycle(s) with /soc@0/replicator@10b06000
+[    0.028008] /soc@0/tmc@10b05000: Fixed dependency cycle(s) with /soc@0/funnel@10b04000
+[    0.028014] /soc@0/replicator@10b06000: Fixed dependency cycle(s) with /dummy-sink
+[    0.028043] /soc@0/replicator@10b06000: Fixed dependency cycle(s) with /soc@0/tmc@10b05000
+[    0.028065] /soc@0/tpda@10b08000: Fixed dependency cycle(s) with /soc@0/funnel@10b04000
+[    0.028069] /soc@0/tpda@10b08000: Fixed dependency cycle(s) with /soc@0/tpdm@10b0d000
+[    0.028074] /soc@0/tpda@10b08000: Fixed dependency cycle(s) with /soc@0/tpdm@10b0c000
+[    0.028079] /soc@0/tpda@10b08000: Fixed dependency cycle(s) with /soc@0/tpdm@10b0b000
+[    0.028083] /soc@0/tpda@10b08000: Fixed dependency cycle(s) with /soc@0/tpdm@10b0a000
+[    0.028088] /soc@0/tpda@10b08000: Fixed dependency cycle(s) with /soc@0/tpdm@10b09000
+[    0.028112] /soc@0/tpdm@10b09000: Fixed dependency cycle(s) with /soc@0/tpda@10b08000
+[    0.028135] /soc@0/tpdm@10b0a000: Fixed dependency cycle(s) with /soc@0/tpda@10b08000
+[    0.028158] /soc@0/tpdm@10b0b000: Fixed dependency cycle(s) with /soc@0/tpda@10b08000
+[    0.028180] /soc@0/tpdm@10b0c000: Fixed dependency cycle(s) with /soc@0/tpda@10b08000
+[    0.028203] /soc@0/tpdm@10b0d000: Fixed dependency cycle(s) with /soc@0/tpda@10b08000
+[    0.028226] /soc@0/tpdm@10c08000: Fixed dependency cycle(s) with /soc@0/funnel@10c0b000
+[    0.028249] /soc@0/funnel@10c0b000: Fixed dependency cycle(s) with /soc@0/tpda@10c3c000
+[    0.028254] /soc@0/funnel@10c0b000: Fixed dependency cycle(s) with /soc@0/tpdm@10c08000
+[    0.028277] /soc@0/tpdm@10c28000: Fixed dependency cycle(s) with /soc@0/tpda@10c2b000
+[    0.028300] /soc@0/tpdm@10c29000: Fixed dependency cycle(s) with /soc@0/tpda@10c2b000
+[    0.028320] /soc@0/tpda@10c2b000: Fixed dependency cycle(s) with /soc@0/funnel@10c2c000
+[    0.028325] /soc@0/tpda@10c2b000: Fixed dependency cycle(s) with /soc@0/tpdm@10c29000
+[    0.028329] /soc@0/tpda@10c2b000: Fixed dependency cycle(s) with /soc@0/tpdm@10c28000
+[    0.028334] /soc@0/tpda@10c2b000: Fixed dependency cycle(s) with /soc@0/tpdm@1082c000
+[    0.028339] /soc@0/tpda@10c2b000: Fixed dependency cycle(s) with /soc@0/tpdm@10841000
+[    0.028344] /soc@0/tpda@10c2b000: Fixed dependency cycle(s) with /soc@0/funnel@10846000
+[    0.028358] /soc@0/funnel@10c2c000: Fixed dependency cycle(s) with /soc@0/funnel@10042000
+[    0.028366] /soc@0/funnel@10c2c000: Fixed dependency cycle(s) with /soc@0/funnel@10d04000
+[    0.028374] /soc@0/funnel@10c2c000: Fixed dependency cycle(s) with /soc@0/funnel@10c3d000
+[    0.028381] /soc@0/funnel@10c2c000: Fixed dependency cycle(s) with /soc@0/tpda@10c2b000
+[    0.028404] /soc@0/tpdm@10c38000: Fixed dependency cycle(s) with /soc@0/tpda@10c3c000
+[    0.028427] /soc@0/tpdm@10c39000: Fixed dependency cycle(s) with /soc@0/tpda@10c3c000
+[    0.028448] /soc@0/tpda@10c3c000: Fixed dependency cycle(s) with /soc@0/funnel@10c3d000
+[    0.028453] /soc@0/tpda@10c3c000: Fixed dependency cycle(s) with /soc@0/tpdm@10c39000
+[    0.028457] /soc@0/tpda@10c3c000: Fixed dependency cycle(s) with /soc@0/tpdm@10c38000
+[    0.028462] /soc@0/tpda@10c3c000: Fixed dependency cycle(s) with /soc@0/tpdm@10800000
+[    0.028467] /soc@0/tpda@10c3c000: Fixed dependency cycle(s) with /soc@0/funnel@10c0b000
+[    0.028488] /soc@0/funnel@10c3d000: Fixed dependency cycle(s) with /soc@0/funnel@10c2c000
+[    0.028495] /soc@0/funnel@10c3d000: Fixed dependency cycle(s) with /soc@0/tpda@10c3c000
+[    0.028518] /soc@0/tpda@10cc4000: Fixed dependency cycle(s) with /soc@0/funnel@10cc5000
+[    0.028541] /soc@0/funnel@10cc5000: Fixed dependency cycle(s) with /soc@0/funnel@10042000
+[    0.028546] /soc@0/funnel@10cc5000: Fixed dependency cycle(s) with /soc@0/tpda@10cc4000
+[    0.028565] /soc@0/funnel@10d04000: Fixed dependency cycle(s) with /soc@0/funnel@10c2c000
+[    0.028573] /soc@0/funnel@10d04000: Fixed dependency cycle(s) with /soc@0/funnel@10d13000
+[    0.028597] /soc@0/tpdm@10d08000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.028620] /soc@0/tpdm@10d09000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.028643] /soc@0/tpdm@10d0a000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.028665] /soc@0/tpdm@10d0b000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.028688] /soc@0/tpdm@10d0c000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.028711] /soc@0/tpdm@10d0d000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.028734] /soc@0/tpdm@10d0e000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.028757] /soc@0/tpdm@10d0f000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.028776] /soc@0/tpda@10d12000: Fixed dependency cycle(s) with /soc@0/funnel@10d13000
+[    0.028781] /soc@0/tpda@10d12000: Fixed dependency cycle(s) with /soc@0/tpdm@10d0f000
+[    0.028786] /soc@0/tpda@10d12000: Fixed dependency cycle(s) with /soc@0/tpdm@10d0e000
+[    0.028790] /soc@0/tpda@10d12000: Fixed dependency cycle(s) with /soc@0/tpdm@10d0d000
+[    0.028795] /soc@0/tpda@10d12000: Fixed dependency cycle(s) with /soc@0/tpdm@10d0c000
+[    0.028799] /soc@0/tpda@10d12000: Fixed dependency cycle(s) with /soc@0/tpdm@10d0b000
+[    0.028804] /soc@0/tpda@10d12000: Fixed dependency cycle(s) with /soc@0/tpdm@10d0a000
+[    0.028809] /soc@0/tpda@10d12000: Fixed dependency cycle(s) with /soc@0/tpdm@10d09000
+[    0.028813] /soc@0/tpda@10d12000: Fixed dependency cycle(s) with /soc@0/tpdm@10d08000
+[    0.028834] /soc@0/funnel@10d13000: Fixed dependency cycle(s) with /soc@0/funnel@10d04000
+[    0.028842] /soc@0/funnel@10d13000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.028848] /soc@0/interrupt-controller@17000000: Fixed dependency cycle(s) with /soc@0/interrupt-controller@17000000
+[    0.028920] /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1bfc000
+[    0.028926] /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1c0e000
+[    0.029468] /soc@0/phy@fd5000: Fixed dependency cycle(s) with /soc@0/usb@a6f8800/usb@a600000
+[    0.029565] /soc@0/phy@fda000: Fixed dependency cycle(s) with /soc@0/usb@a8f8800/usb@a800000
+[    0.030091] /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1bfc000
+[    0.030109] /soc@0/phy@1bfc000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    0.030242] /soc@0/clock-controller@100000: Fixed dependency cycle(s) with /soc@0/phy@1c0e000
+[    0.030258] /soc@0/phy@1c0e000: Fixed dependency cycle(s) with /soc@0/clock-controller@100000
+[    0.031661] /soc@0/usb@a6f8800/usb@a600000: Fixed dependency cycle(s) with /soc@0/phy@fd5000
+[    0.031759] /soc@0/usb@a8f8800/usb@a800000: Fixed dependency cycle(s) with /soc@0/phy@fda000
+[    0.031931] /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@aea0000
+[    0.031954] /soc@0/display-subsystem@ae00000/displayport-controller@aea0000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@aea0000/aux-bus/panel
+[    0.031976] /soc@0/display-subsystem@ae00000/displayport-controller@aea0000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[    0.032023] /soc@0/display-subsystem@ae00000/displayport-controller@aea0000/aux-bus/panel: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@aea0000
+[    0.032516] /soc@0/stm@10002000: Fixed dependency cycle(s) with /soc@0/funnel@10041000
+[    0.032554] /soc@0/tpda@10004000: Fixed dependency cycle(s) with /soc@0/funnel@10041000
+[    0.032558] /soc@0/tpda@10004000: Fixed dependency cycle(s) with /soc@0/tpdm@1000f000
+[    0.032586] /soc@0/tpda@10004000: Fixed dependency cycle(s) with /soc@0/tpdm@1000f000
+[    0.032609] /soc@0/tpdm@1000f000: Fixed dependency cycle(s) with /soc@0/tpda@10004000
+[    0.032654] /soc@0/tpda@10004000: Fixed dependency cycle(s) with /soc@0/funnel@10041000
+[    0.032677] /soc@0/stm@10002000: Fixed dependency cycle(s) with /soc@0/funnel@10041000
+[    0.032699] /soc@0/funnel@10041000: Fixed dependency cycle(s) with /soc@0/funnel@10045000
+[    0.032703] /soc@0/funnel@10041000: Fixed dependency cycle(s) with /soc@0/stm@10002000
+[    0.032717] /soc@0/funnel@10041000: Fixed dependency cycle(s) with /soc@0/tpda@10004000
+[    0.032755] /soc@0/funnel@10042000: Fixed dependency cycle(s) with /soc@0/funnel@10045000
+[    0.032766] /soc@0/funnel@10042000: Fixed dependency cycle(s) with /soc@0/funnel@10c2c000
+[    0.032771] /soc@0/funnel@10042000: Fixed dependency cycle(s) with /soc@0/funnel@10ac5000
+[    0.032776] /soc@0/funnel@10042000: Fixed dependency cycle(s) with /soc@0/funnel@10cc5000
+[    0.032808] /soc@0/funnel@10042000: Fixed dependency cycle(s) with /soc@0/funnel@10045000
+[    0.032832] /soc@0/funnel@10041000: Fixed dependency cycle(s) with /soc@0/funnel@10045000
+[    0.032846] /soc@0/funnel@10045000: Fixed dependency cycle(s) with /soc@0/funnel@10b04000
+[    0.032858] /soc@0/funnel@10045000: Fixed dependency cycle(s) with /soc@0/funnel@10042000
+[    0.032870] /soc@0/funnel@10045000: Fixed dependency cycle(s) with /soc@0/funnel@10041000
+[    0.032919] /soc@0/tpdm@10800000: Fixed dependency cycle(s) with /soc@0/tpda@10c3c000
+[    0.032955] /soc@0/tpdm@1082c000: Fixed dependency cycle(s) with /soc@0/tpda@10c2b000
+[    0.032995] /soc@0/tpdm@10841000: Fixed dependency cycle(s) with /soc@0/tpda@10c2b000
+[    0.033032] /soc@0/tpdm@10844000: Fixed dependency cycle(s) with /soc@0/funnel@10846000
+[    0.033072] /soc@0/tpdm@10844000: Fixed dependency cycle(s) with /soc@0/funnel@10846000
+[    0.033095] /soc@0/funnel@10846000: Fixed dependency cycle(s) with /soc@0/tpda@10c2b000
+[    0.033099] /soc@0/funnel@10846000: Fixed dependency cycle(s) with /soc@0/tpdm@10844000
+[    0.033163] /soc@0/tpdm@10ac1000: Fixed dependency cycle(s) with /soc@0/tpda@10ac4000
+[    0.033202] /soc@0/tpdm@10ac1000: Fixed dependency cycle(s) with /soc@0/tpda@10ac4000
+[    0.033226] /soc@0/tpda@10ac4000: Fixed dependency cycle(s) with /soc@0/funnel@10ac5000
+[    0.033230] /soc@0/tpda@10ac4000: Fixed dependency cycle(s) with /soc@0/tpdm@10ac1000
+[    0.033275] /soc@0/tpda@10ac4000: Fixed dependency cycle(s) with /soc@0/funnel@10ac5000
+[    0.033288] /soc@0/funnel@10042000: Fixed dependency cycle(s) with /soc@0/funnel@10ac5000
+[    0.033310] /soc@0/funnel@10ac5000: Fixed dependency cycle(s) with /soc@0/funnel@10042000
+[    0.033321] /soc@0/funnel@10ac5000: Fixed dependency cycle(s) with /soc@0/tpda@10ac4000
+[    0.033359] /soc@0/funnel@10045000: Fixed dependency cycle(s) with /soc@0/funnel@10b04000
+[    0.033371] /soc@0/funnel@10b04000: Fixed dependency cycle(s) with /soc@0/tmc@10b05000
+[    0.033385] /soc@0/funnel@10b04000: Fixed dependency cycle(s) with /soc@0/funnel@10045000
+[    0.033398] /soc@0/funnel@10b04000: Fixed dependency cycle(s) with /soc@0/tpda@10b08000
+[    0.033426] /soc@0/funnel@10b04000: Fixed dependency cycle(s) with /soc@0/tmc@10b05000
+[    0.033438] /soc@0/tmc@10b05000: Fixed dependency cycle(s) with /soc@0/replicator@10b06000
+[    0.033453] /soc@0/tmc@10b05000: Fixed dependency cycle(s) with /soc@0/funnel@10b04000
+[    0.033488] /soc@0/tmc@10b05000: Fixed dependency cycle(s) with /soc@0/replicator@10b06000
+[    0.033511] /dummy-sink: Fixed dependency cycle(s) with /soc@0/replicator@10b06000
+[    0.033522] /soc@0/replicator@10b06000: Fixed dependency cycle(s) with /dummy-sink
+[    0.033544] /soc@0/replicator@10b06000: Fixed dependency cycle(s) with /soc@0/tmc@10b05000
+[    0.033583] /soc@0/funnel@10b04000: Fixed dependency cycle(s) with /soc@0/tpda@10b08000
+[    0.033606] /soc@0/tpda@10b08000: Fixed dependency cycle(s) with /soc@0/funnel@10b04000
+[    0.033617] /soc@0/tpda@10b08000: Fixed dependency cycle(s) with /soc@0/tpdm@10b0d000
+[    0.033622] /soc@0/tpda@10b08000: Fixed dependency cycle(s) with /soc@0/tpdm@10b0c000
+[    0.033626] /soc@0/tpda@10b08000: Fixed dependency cycle(s) with /soc@0/tpdm@10b0b000
+[    0.033631] /soc@0/tpda@10b08000: Fixed dependency cycle(s) with /soc@0/tpdm@10b0a000
+[    0.033635] /soc@0/tpda@10b08000: Fixed dependency cycle(s) with /soc@0/tpdm@10b09000
+[    0.033665] /soc@0/tpda@10b08000: Fixed dependency cycle(s) with /soc@0/tpdm@10b09000
+[    0.033689] /soc@0/tpdm@10b09000: Fixed dependency cycle(s) with /soc@0/tpda@10b08000
+[    0.033725] /soc@0/tpda@10b08000: Fixed dependency cycle(s) with /soc@0/tpdm@10b0a000
+[    0.033749] /soc@0/tpdm@10b0a000: Fixed dependency cycle(s) with /soc@0/tpda@10b08000
+[    0.033782] /soc@0/tpda@10b08000: Fixed dependency cycle(s) with /soc@0/tpdm@10b0b000
+[    0.033805] /soc@0/tpdm@10b0b000: Fixed dependency cycle(s) with /soc@0/tpda@10b08000
+[    0.033839] /soc@0/tpda@10b08000: Fixed dependency cycle(s) with /soc@0/tpdm@10b0c000
+[    0.033862] /soc@0/tpdm@10b0c000: Fixed dependency cycle(s) with /soc@0/tpda@10b08000
+[    0.033897] /soc@0/tpda@10b08000: Fixed dependency cycle(s) with /soc@0/tpdm@10b0d000
+[    0.033920] /soc@0/tpdm@10b0d000: Fixed dependency cycle(s) with /soc@0/tpda@10b08000
+[    0.033967] /soc@0/tpdm@10c08000: Fixed dependency cycle(s) with /soc@0/funnel@10c0b000
+[    0.034003] /soc@0/tpdm@10c08000: Fixed dependency cycle(s) with /soc@0/funnel@10c0b000
+[    0.034026] /soc@0/funnel@10c0b000: Fixed dependency cycle(s) with /soc@0/tpda@10c3c000
+[    0.034031] /soc@0/funnel@10c0b000: Fixed dependency cycle(s) with /soc@0/tpdm@10c08000
+[    0.034077] /soc@0/tpdm@10c28000: Fixed dependency cycle(s) with /soc@0/tpda@10c2b000
+[    0.034116] /soc@0/tpdm@10c29000: Fixed dependency cycle(s) with /soc@0/tpda@10c2b000
+[    0.034155] /soc@0/tpdm@10c29000: Fixed dependency cycle(s) with /soc@0/tpda@10c2b000
+[    0.034178] /soc@0/tpdm@10c28000: Fixed dependency cycle(s) with /soc@0/tpda@10c2b000
+[    0.034200] /soc@0/funnel@10846000: Fixed dependency cycle(s) with /soc@0/tpda@10c2b000
+[    0.034225] /soc@0/tpdm@10841000: Fixed dependency cycle(s) with /soc@0/tpda@10c2b000
+[    0.034249] /soc@0/tpdm@1082c000: Fixed dependency cycle(s) with /soc@0/tpda@10c2b000
+[    0.034270] /soc@0/tpda@10c2b000: Fixed dependency cycle(s) with /soc@0/funnel@10c2c000
+[    0.034275] /soc@0/tpda@10c2b000: Fixed dependency cycle(s) with /soc@0/tpdm@10c29000
+[    0.034286] /soc@0/tpda@10c2b000: Fixed dependency cycle(s) with /soc@0/tpdm@10c28000
+[    0.034297] /soc@0/tpda@10c2b000: Fixed dependency cycle(s) with /soc@0/tpdm@1082c000
+[    0.034330] /soc@0/tpda@10c2b000: Fixed dependency cycle(s) with /soc@0/tpdm@10841000
+[    0.034341] /soc@0/tpda@10c2b000: Fixed dependency cycle(s) with /soc@0/funnel@10846000
+[    0.034390] /soc@0/tpda@10c2b000: Fixed dependency cycle(s) with /soc@0/funnel@10c2c000
+[    0.034410] /soc@0/funnel@10042000: Fixed dependency cycle(s) with /soc@0/funnel@10c2c000
+[    0.034427] /soc@0/funnel@10c2c000: Fixed dependency cycle(s) with /soc@0/funnel@10042000
+[    0.034441] /soc@0/funnel@10c2c000: Fixed dependency cycle(s) with /soc@0/funnel@10d04000
+[    0.034447] /soc@0/funnel@10c2c000: Fixed dependency cycle(s) with /soc@0/funnel@10c3d000
+[    0.034454] /soc@0/funnel@10c2c000: Fixed dependency cycle(s) with /soc@0/tpda@10c2b000
+[    0.034500] /soc@0/tpdm@10c38000: Fixed dependency cycle(s) with /soc@0/tpda@10c3c000
+[    0.034537] /soc@0/tpdm@10c39000: Fixed dependency cycle(s) with /soc@0/tpda@10c3c000
+[    0.034577] /soc@0/tpdm@10c39000: Fixed dependency cycle(s) with /soc@0/tpda@10c3c000
+[    0.034600] /soc@0/tpdm@10c38000: Fixed dependency cycle(s) with /soc@0/tpda@10c3c000
+[    0.034622] /soc@0/funnel@10c0b000: Fixed dependency cycle(s) with /soc@0/tpda@10c3c000
+[    0.034646] /soc@0/tpdm@10800000: Fixed dependency cycle(s) with /soc@0/tpda@10c3c000
+[    0.034670] /soc@0/tpda@10c3c000: Fixed dependency cycle(s) with /soc@0/funnel@10c3d000
+[    0.034674] /soc@0/tpda@10c3c000: Fixed dependency cycle(s) with /soc@0/tpdm@10c39000
+[    0.034686] /soc@0/tpda@10c3c000: Fixed dependency cycle(s) with /soc@0/tpdm@10c38000
+[    0.034697] /soc@0/tpda@10c3c000: Fixed dependency cycle(s) with /soc@0/tpdm@10800000
+[    0.034709] /soc@0/tpda@10c3c000: Fixed dependency cycle(s) with /soc@0/funnel@10c0b000
+[    0.034754] /soc@0/tpda@10c3c000: Fixed dependency cycle(s) with /soc@0/funnel@10c3d000
+[    0.034767] /soc@0/funnel@10c2c000: Fixed dependency cycle(s) with /soc@0/funnel@10c3d000
+[    0.034788] /soc@0/funnel@10c3d000: Fixed dependency cycle(s) with /soc@0/funnel@10c2c000
+[    0.034803] /soc@0/funnel@10c3d000: Fixed dependency cycle(s) with /soc@0/tpda@10c3c000
+[    0.034848] /soc@0/tpda@10cc4000: Fixed dependency cycle(s) with /soc@0/funnel@10cc5000
+[    0.034887] /soc@0/tpda@10cc4000: Fixed dependency cycle(s) with /soc@0/funnel@10cc5000
+[    0.034901] /soc@0/funnel@10042000: Fixed dependency cycle(s) with /soc@0/funnel@10cc5000
+[    0.034925] /soc@0/funnel@10cc5000: Fixed dependency cycle(s) with /soc@0/funnel@10042000
+[    0.034940] /soc@0/funnel@10cc5000: Fixed dependency cycle(s) with /soc@0/tpda@10cc4000
+[    0.034977] /soc@0/funnel@10c2c000: Fixed dependency cycle(s) with /soc@0/funnel@10d04000
+[    0.034997] /soc@0/funnel@10d04000: Fixed dependency cycle(s) with /soc@0/funnel@10c2c000
+[    0.035013] /soc@0/funnel@10d04000: Fixed dependency cycle(s) with /soc@0/funnel@10d13000
+[    0.035050] /soc@0/tpdm@10d08000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.035088] /soc@0/tpdm@10d09000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.035125] /soc@0/tpdm@10d0a000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.035163] /soc@0/tpdm@10d0b000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.035200] /soc@0/tpdm@10d0c000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.035238] /soc@0/tpdm@10d0d000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.035275] /soc@0/tpdm@10d0e000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.035315] /soc@0/tpdm@10d0f000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.035353] /soc@0/tpdm@10d0f000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.035376] /soc@0/tpdm@10d0e000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.035401] /soc@0/tpdm@10d0d000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.035423] /soc@0/tpdm@10d0c000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.035446] /soc@0/tpdm@10d0b000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.035468] /soc@0/tpdm@10d0a000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.035491] /soc@0/tpdm@10d09000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.035515] /soc@0/tpdm@10d08000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.035536] /soc@0/tpda@10d12000: Fixed dependency cycle(s) with /soc@0/funnel@10d13000
+[    0.035540] /soc@0/tpda@10d12000: Fixed dependency cycle(s) with /soc@0/tpdm@10d0f000
+[    0.035551] /soc@0/tpda@10d12000: Fixed dependency cycle(s) with /soc@0/tpdm@10d0e000
+[    0.035562] /soc@0/tpda@10d12000: Fixed dependency cycle(s) with /soc@0/tpdm@10d0d000
+[    0.035576] /soc@0/tpda@10d12000: Fixed dependency cycle(s) with /soc@0/tpdm@10d0c000
+[    0.035590] /soc@0/tpda@10d12000: Fixed dependency cycle(s) with /soc@0/tpdm@10d0b000
+[    0.035601] /soc@0/tpda@10d12000: Fixed dependency cycle(s) with /soc@0/tpdm@10d0a000
+[    0.035612] /soc@0/tpda@10d12000: Fixed dependency cycle(s) with /soc@0/tpdm@10d09000
+[    0.035623] /soc@0/tpda@10d12000: Fixed dependency cycle(s) with /soc@0/tpdm@10d08000
+[    0.035668] /soc@0/tpda@10d12000: Fixed dependency cycle(s) with /soc@0/funnel@10d13000
+[    0.035682] /soc@0/funnel@10d04000: Fixed dependency cycle(s) with /soc@0/funnel@10d13000
+[    0.035705] /soc@0/funnel@10d13000: Fixed dependency cycle(s) with /soc@0/funnel@10d04000
+[    0.035720] /soc@0/funnel@10d13000: Fixed dependency cycle(s) with /soc@0/tpda@10d12000
+[    0.038771] /soc@0/rsc@17500000/regulators-0: Fixed dependency cycle(s) with /soc@0/rsc@17500000/regulators-0/bob2
+[    0.038778] /soc@0/rsc@17500000/regulators-0: Fixed dependency cycle(s) with /soc@0/rsc@17500000/regulators-0/bob1
+[    0.038972] /soc@0/rsc@17500000/regulators-7: Fixed dependency cycle(s) with /soc@0/rsc@17500000/regulators-7/smps5
+[    0.038979] /soc@0/rsc@17500000/regulators-7: Fixed dependency cycle(s) with /soc@0/rsc@17500000/regulators-4/smps1
+[    0.039556] /pmic-glink/connector@0: Fixed dependency cycle(s) with /soc@0/phy@fd5000
+[    0.039601] /pmic-glink/connector@0: Fixed dependency cycle(s) with /soc@0/usb@a6f8800/usb@a600000
+[    0.039641] /pmic-glink/connector@1: Fixed dependency cycle(s) with /soc@0/phy@fda000
+[    0.039687] /pmic-glink/connector@1: Fixed dependency cycle(s) with /soc@0/usb@a8f8800/usb@a800000
+[    0.040462] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.040465] HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[    0.040468] HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.040471] HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[    0.040474] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.040476] HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.040479] HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+[    0.040481] HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+[    0.041315] fbcon: Taking over console
+[    0.041321] ACPI: Interpreter disabled.
+[    0.041768] iommu: Default domain type: Translated
+[    0.041770] iommu: DMA domain TLB invalidation policy: strict mode
+[    0.045130] SCSI subsystem initialized
+[    0.045164] libata version 3.00 loaded.
+[    0.045212] usbcore: registered new interface driver usbfs
+[    0.045221] usbcore: registered new interface driver hub
+[    0.045230] usbcore: registered new device driver usb
+[    0.045295] pps_core: LinuxPPS API ver. 1 registered
+[    0.045298] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.045303] PTP clock support registered
+[    0.045404] EDAC MC: Ver: 3.0.0
+[    0.045473] scmi_core: SCMI protocol bus registered
+[    0.046099] NetLabel: Initializing
+[    0.046101] NetLabel:  domain hash size = 128
+[    0.046103] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.046129] NetLabel:  unlabeled traffic allowed by default
+[    0.046190] mctp: management component transport protocol core
+[    0.046194] NET: Registered PF_MCTP protocol family
+[    0.046248] vgaarb: loaded
+[    0.052135] clocksource: Switched to clocksource arch_sys_counter
+[    0.052325] VFS: Disk quotas dquot_6.6.0
+[    0.052335] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.052565] AppArmor: AppArmor Filesystem Enabled
+[    0.052577] pnp: PnP ACPI: disabled
+[    0.054004] NET: Registered PF_INET protocol family
+[    0.054057] IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.070665] tcp_listen_portaddr_hash hash table entries: 16384 (order: 6, 262144 bytes, linear)
+[    0.070769] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.070806] TCP established hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.071570] TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+[    0.072336] TCP: Hash tables configured (established 262144 bind 65536)
+[    0.072403] MPTCP token hash table entries: 32768 (order: 8, 786432 bytes, linear)
+[    0.072465] UDP hash table entries: 16384 (order: 8, 1048576 bytes, linear)
+[    0.072975] UDP-Lite hash table entries: 16384 (order: 8, 1048576 bytes, linear)
+[    0.073520] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.073534] NET: Registered PF_XDP protocol family
+[    0.073540] PCI: CLS 0 bytes, default 64
+[    0.073614] Trying to unpack rootfs image as initramfs...
+[    0.074180] kvm [1]: HYP mode not available
+[    0.074579] Initialise system trusted keyrings
+[    0.074592] Key type blacklist registered
+[    0.074626] workingset: timestamp_bits=40 max_order=23 bucket_order=0
+[    0.074887] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.074978] fuse: init (API version 7.45)
+[    0.075106] integrity: Platform Keyring initialized
+[    0.075112] integrity: Machine keyring initialized
+[    0.085730] Key type asymmetric registered
+[    0.085733] Asymmetric key parser 'x509' registered
+[    0.085753] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 241)
+[    0.085802] io scheduler mq-deadline registered
+[    0.089154] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.094541] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    0.096579] msm_serial: driver initialized
+[    0.096655] SuperH (H)SCI(F) driver initialized
+[    0.099658] loop: module loaded
+[    0.100231] tun: Universal TUN/TAP device driver, 1.6
+[    0.100447] PPP generic driver version 2.4.2
+[    0.100662] mousedev: PS/2 mouse device common for all mice
+[    0.100851] i2c_dev: i2c /dev entries driver
+[    0.101256] device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+[    0.101270] device-mapper: uevent: version 1.0.3
+[    0.101307] device-mapper: ioctl: 4.50.0-ioctl (2025-04-28) initialised: dm-devel@lists.linux.dev
+[    0.101507] driver: Idle state 1 target residency too low
+[    0.101543] driver: Idle state 1 target residency too low
+[    0.101575] driver: Idle state 1 target residency too low
+[    0.101606] driver: Idle state 1 target residency too low
+[    0.101638] driver: Idle state 1 target residency too low
+[    0.101673] driver: Idle state 1 target residency too low
+[    0.101709] driver: Idle state 1 target residency too low
+[    0.101744] driver: Idle state 1 target residency too low
+[    0.102098] simple-framebuffer simple-framebuffer.0: [drm] Registered 1 planes with drm panic
+[    0.102181] [drm] Initialized simpledrm 1.0.0 for simple-framebuffer.0 on minor 0
+[    0.107483] Console: switching to colour frame buffer device 240x75
+[    0.117222] simple-framebuffer simple-framebuffer.0: [drm] fb0: simpledrmdrmfb frame buffer device
+[    0.117702] SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+[    0.118012] clocksource: arch_mmio_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.118049] arch-timer-mmio 17800000.timer: mmio timer running at 19.20MHz (virt)
+[    0.121594] hw perfevents: enabled with armv8_pmuv3 PMU driver, 13 (0,80000fff) counters available
+[    0.122191] watchdog: NMI not fully supported
+[    0.122207] watchdog: Hard watchdog permanently disabled
+[    0.122342] drop_monitor: Initializing network drop monitor service
+[    0.122473] NET: Registered PF_INET6 protocol family
+[    0.122900] Segment Routing with IPv6
+[    0.122921] In-situ OAM (IOAM) with IPv6
+[    0.122958] NET: Registered PF_PACKET protocol family
+[    0.123148] Key type dns_resolver registered
+[    0.125521] registered taskstats version 1
+[    0.131352] Loading compiled-in X.509 certificates
+[    0.132414] Loaded X.509 cert 'Build time autogenerated kernel key: 028037066120582f4625049a3bf2f1e02710fd0e'
+[    0.133295] Loaded X.509 cert 'Canonical Ltd. Live Patch Signing 2025 Kmod: d541cef61dc7e793b7eb7e899970a2eef0b5dc8c'
+[    0.134127] Loaded X.509 cert 'Canonical Ltd. Live Patch Signing: 14df34d1a87cf37625abec039ef2bf521249b969'
+[    0.135032] Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing 2025 Kmod: 4627603d2357a2a3f81006370894c221175893e9'
+[    0.136036] Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing: 88f752e560a1e0737e31163a466ad7b70a850c19'
+[    0.136070] blacklist: Loading compiled-in revocation X.509 certificates
+[    0.136104] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing: 61482aa2830d0ab2ad5af10b7250da9033ddcef0'
+[    0.136235] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2017): 242ade75ac4a15e50d50c84b0d45ff3eae707a03'
+[    0.136279] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (ESM 2018): 365188c1d374d6b07c3c8f240f8ef722433d6a8b'
+[    0.136324] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2019): c0746fd6c5da3ae827864651ad66ae47fe24b3e8'
+[    0.136367] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v1): a8d54bbb3825cfb94fa13c9f8a594a195c107b8d'
+[    0.136410] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v2): 4cf046892d6fd3c9a5b03f98d845f90851dc6a8c'
+[    0.136457] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v3): 100437bb6de6e469b581e61cd66bce3ef4ed53af'
+[    0.136502] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (Ubuntu Core 2019): c1d57b8f6b743f23ee41f4f7ee292f06eecadfb9'
+[    0.141957] Demotion targets for Node 0: null
+[    0.142146] Key type .fscrypt registered
+[    0.142160] Key type fscrypt-provisioning registered
+[    0.142241] Key type big_key registered
+[    0.374397] Freeing initrd memory: 143992K
+[    0.384115] Key type encrypted registered
+[    0.384189] AppArmor: AppArmor sha256 policy hashing enabled
+[    0.384244] ima: secureboot mode unknown
+[    0.384262] ima: No TPM chip found, activating TPM-bypass!
+[    0.384284] Loading compiled-in module X.509 certificates
+[    0.385116] Loaded X.509 cert 'Build time autogenerated kernel key: 028037066120582f4625049a3bf2f1e02710fd0e'
+[    0.385258] ima: Allocated hash algorithm: sha256
+[    0.385289] ima: No architecture policies found
+[    0.385325] evm: Initialising EVM extended attributes:
+[    0.385342] evm: security.selinux
+[    0.385355] evm: security.SMACK64
+[    0.385367] evm: security.SMACK64EXEC
+[    0.385380] evm: security.SMACK64TRANSMUTE
+[    0.385394] evm: security.SMACK64MMAP
+[    0.385407] evm: security.apparmor
+[    0.385420] evm: security.ima
+[    0.389632] evm: security.capability
+[    0.393824] evm: HMAC attrs: 0x1
+[    0.396382] integrity: Couldn't get size: Unsupported (0x8000000000000003)
+[    0.397445] integrity: MODSIGN: Couldn't get UEFI db list
+[    0.398581] integrity: Couldn't get size: Unsupported (0x8000000000000003)
+[    0.399650] integrity: Couldn't get UEFI dbx list
+[    0.404433] clk: Not disabling unused clocks
+[    0.405507] PM: genpd: Not disabling unused power domains
+[    0.410679] Freeing unused kernel memory: 15168K
+[    0.508915] Checked W+X mappings: passed, no W+X pages found
+[    0.512017] Run /init as init process
+[    0.513056]   with arguments:
+[    0.513058]     /init
+[    0.513059]     ---
+[    0.513061]   with environment:
+[    0.513062]     HOME=/
+[    0.513063]     TERM=linux
+[    0.771631] qcom_scm firmware:scm: of_icc_get_by_index: invalid path=-517
+[    0.777396] qcom_scm: convention: smc arm 64
+[    0.785461] qcom_scm firmware:scm: qseecom: found qseecom with version 0x1402000
+[    0.787260] qcom_scm firmware:scm: qseecom: untested machine, skipping
+[    0.817893] sbsa-gwdt 1c840000.watchdog: Initialized with 10s timeout @ 19200000 Hz, action=0.
+[    0.822864] arm-smmu 15000000.iommu: probing hardware configuration...
+[    0.823178] vreg_s5j_1p2: Setting 1256000-1304000uV
+[    0.823178] vreg_s1f_0p7: Setting 700000-1100000uV
+[    0.823324] vreg_l1j_0p8: Setting 880000-920000uV
+[    0.823450] vreg_l2j_1p2: Setting 1256000-1256000uV
+[    0.823517] vreg_l3j_0p8: Setting 880000-920000uV
+[    0.824040] arm-smmu 15000000.iommu: SMMUv2 with:
+[    0.832998] arm-smmu 15000000.iommu: 	stage 1 translation
+[    0.834128] arm-smmu 15000000.iommu: 	coherent table walk
+[    0.835167] arm-smmu 15000000.iommu: 	stream matching with 117 register groups
+[    0.836201] arm-smmu 15000000.iommu: 	74 context banks (0 stage-2 only)
+[    0.837830] arm-smmu 15000000.iommu: 	Supported page sizes: 0x61311000
+[    0.838875] arm-smmu 15000000.iommu: 	Stage-1: 40-bit VA -> 40-bit IPA
+[    0.839932] arm-smmu 15000000.iommu: 	preserved 0 boot mappings
+[    0.855479] platform 8c0000.geniqup: Adding to iommu group 0
+[    0.862607] platform ac0000.geniqup: Adding to iommu group 1
+[    0.866235] platform bc0000.geniqup: Adding to iommu group 2
+[    0.868955] platform ae00000.display-subsystem: Adding to iommu group 3
+[    0.870129] platform a200000.usb: Adding to iommu group 4
+[    0.873213] spmi_pmic_arb c400000.arbiter: PMIC arbiter version v7 (0x70000001)
+[    0.874348] arm-scmi arm-scmi.0.auto: Using scmi_mailbox_transport
+[    0.875347] arm-scmi arm-scmi.0.auto: SCMI max-rx-timeout: 30ms / max-msg-size: 104bytes / max-msg: 20
+[    0.880511] arm-scmi arm-scmi.0.auto: SCMI RAW Mode initialized for instance 0
+[    0.882166] arm-scmi arm-scmi.0.auto: SCMI RAW Mode COEX enabled !
+[    0.885381] arm-scmi arm-scmi.0.auto: SCMI Notifications - Core Enabled.
+[    0.886540] arm-scmi arm-scmi.0.auto: SCMI Protocol v2.0 'Qualcomm:' Firmware version 0x20000
+[    0.887564] arm-scmi arm-scmi.0.auto: Enabling SCMI Quirk [quirk_perf_level_get_fc_force]
+[    0.888764] arm-scmi arm-scmi.0.auto: Enabling SCMI Quirk [quirk_clock_rates_triplet_out_of_spec]
+[    0.892860] platform a400000.usb: Adding to iommu group 5
+[    0.894329] irq: IRQ134: trimming hierarchy from :soc@0:interrupt-controller@b220000-9
+[    0.895644] input: gpio-keys as /devices/platform/gpio-keys/input/input0
+[    0.896950] platform a600000.usb: Adding to iommu group 6
+[    0.899249] /pmic-glink/connector@0: Fixed dependency cycle(s) with /soc@0/usb@a6f8800/usb@a600000
+[    0.904065] /soc@0/phy@fd5000: Fixed dependency cycle(s) with /soc@0/usb@a6f8800/usb@a600000
+[    0.905734] /soc@0/usb@a6f8800/usb@a600000: Fixed dependency cycle(s) with /pmic-glink/connector@0
+[    0.906743] /soc@0/usb@a6f8800/usb@a600000: Fixed dependency cycle(s) with /soc@0/phy@fd5000
+[    0.913988] /pmic-glink/connector@0: Fixed dependency cycle(s) with /soc@0/phy@fd5000
+[    0.917608] platform a800000.usb: Adding to iommu group 7
+[    0.919288] /pmic-glink/connector@1: Fixed dependency cycle(s) with /soc@0/usb@a8f8800/usb@a800000
+[    0.920554] /soc@0/phy@fda000: Fixed dependency cycle(s) with /soc@0/usb@a8f8800/usb@a800000
+[    0.925725] /soc@0/usb@a8f8800/usb@a800000: Fixed dependency cycle(s) with /pmic-glink/connector@1
+[    0.927050] /soc@0/usb@a8f8800/usb@a800000: Fixed dependency cycle(s) with /soc@0/phy@fda000
+[    0.962577] /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@aea0000
+[    0.962616] arm-smmu 3da0000.iommu: probing hardware configuration...
+[    0.964779] arm-smmu 3da0000.iommu: SMMUv2 with:
+[    0.965864] arm-smmu 3da0000.iommu: 	stage 1 translation
+[    0.966915] arm-smmu 3da0000.iommu: 	coherent table walk
+[    0.967961] arm-smmu 3da0000.iommu: 	stream matching with 24 register groups
+[    0.969026] arm-smmu 3da0000.iommu: 	22 context banks (0 stage-2 only)
+[    0.970106] arm-smmu 3da0000.iommu: 	Supported page sizes: 0x61311000
+[    0.971081] /soc@0/display-subsystem@ae00000/display-controller@ae01000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@aea0000
+[    0.971167] arm-smmu 3da0000.iommu: 	Stage-1: 48-bit VA -> 40-bit IPA
+[    0.971223] arm-smmu 3da0000.iommu: 	preserved 0 boot mappings
+[    0.972502] /soc@0/display-subsystem@ae00000/displayport-controller@aea0000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@aea0000/aux-bus/panel
+[    0.977191] /soc@0/display-subsystem@ae00000/displayport-controller@aea0000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/display-controller@ae01000
+[    0.978929] platform 3d00000.gpu: Adding to iommu group 8
+[    0.980379] /soc@0/display-subsystem@ae00000/displayport-controller@aea0000/aux-bus/panel: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@aea0000
+[    0.981732] platform 3d6a000.gmu: Adding to iommu group 9
+[    0.987780] NET: Registered PF_QIPCRTR protocol family
+[    1.009787] vreg_l2e_0p8: Setting 880000-920000uV
+[    1.011225] vreg_l3c_0p8: Setting 912000-912000uV
+[    1.014691] vreg_s4c_1p8: Setting 1856000-2000000uV
+[    1.016553] vreg_l3e_1p2: Setting 1200000-1200000uV
+[    1.018858] remoteproc remoteproc0: adsp is available
+[    1.020176] remoteproc remoteproc0: Direct firmware load for qcom/x1p42100/ASUSTeK/vivobook-s14/qcadsp8380.mbn failed with error -2
+[    1.021461] remoteproc remoteproc0: powering up adsp
+[    1.022758] remoteproc remoteproc0: Direct firmware load for qcom/x1p42100/ASUSTeK/vivobook-s14/qcadsp8380.mbn failed with error -2
+[    1.023787] remoteproc remoteproc1: cdsp is available
+[    1.024069] remoteproc remoteproc0: request_firmware failed: -2
+[    1.025418] remoteproc remoteproc1: Direct firmware load for qcom/x1p42100/ASUSTeK/vivobook-s14/qccdsp8380.mbn failed with error -2
+[    1.027947] remoteproc remoteproc1: powering up cdsp
+[    1.029269] remoteproc remoteproc1: Direct firmware load for qcom/x1p42100/ASUSTeK/vivobook-s14/qccdsp8380.mbn failed with error -2
+[    1.030591] remoteproc remoteproc1: request_firmware failed: -2
+[    1.031580] a98000.serial: ttyHS1 at MMIO 0xa98000 (irq = 178, base_baud = 0) is a MSM
+[    1.033530] serial serial0: tty port ttyHS1 registered
+[    1.049536] /soc@0/display-subsystem@ae00000/displayport-controller@aea0000: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@aea0000/aux-bus/panel
+[    1.052339] /soc@0/display-subsystem@ae00000/displayport-controller@aea0000/aux-bus/panel: Fixed dependency cycle(s) with /soc@0/display-subsystem@ae00000/displayport-controller@aea0000
+[    1.064370] hid: raw HID events driver (C) Jiri Kosina
+[    1.070504] irq: IRQ186: trimming hierarchy from :soc@0:interrupt-controller@b220000-9
+[    1.071961] irq: IRQ187: trimming hierarchy from :soc@0:interrupt-controller@b220000-9
+[    1.071998] i2c_hid_of 0-0015: supply vdd not found, using dummy regulator
+[    1.073422] i2c_hid_of 3-003a: supply vdd not found, using dummy regulator
+[    1.076254] i2c_hid_of 3-003a: supply vddl not found, using dummy regulator
+[    1.077173] i2c_hid_of 0-0015: supply vddl not found, using dummy regulator
+[    1.187337] msm_dpu ae01000.display-controller: bound aea0000.displayport-controller (ops msm_dp_display_comp_ops [msm])
+[    1.191416] adreno 3d00000.gpu: supply vdd not found, using dummy regulator
+[    1.192979] adreno 3d00000.gpu: supply vddcx not found, using dummy regulator
+[    1.205810] msm_dpu ae01000.display-controller: bound 3d00000.gpu (ops a3xx_ops [msm])
+[    1.220473] input: hid-over-i2c 04F3:3313 Mouse as /devices/platform/soc@0/bc0000.geniqup/b80000.i2c/i2c-0/0-0015/0018:04F3:3313.0001/input/input1
+[    1.222211] input: hid-over-i2c 04F3:3313 Touchpad as /devices/platform/soc@0/bc0000.geniqup/b80000.i2c/i2c-0/0-0015/0018:04F3:3313.0001/input/input2
+[    1.223923] hid-generic 0018:04F3:3313.0001: input,hidraw0: I2C HID v1.00 Mouse [hid-over-i2c 04F3:3313] on 0-0015
+[    1.225704] input: hid-over-i2c 0B05:4543 Keyboard as /devices/platform/soc@0/bc0000.geniqup/b94000.i2c/i2c-3/3-003a/0018:0B05:4543.0002/input/input3
+[    1.227371] input: hid-over-i2c 0B05:4543 as /devices/platform/soc@0/bc0000.geniqup/b94000.i2c/i2c-3/3-003a/0018:0B05:4543.0002/input/input4
+[    1.229046] hid-generic 0018:0B05:4543.0002: input,hidraw1: I2C HID v1.00 Keyboard [hid-over-i2c 0B05:4543] on 3-003a
+[    1.235270] Console: switching to colour dummy device 80x25
+[    1.236371] [drm:dpu_kms_hw_init:1173] dpu hardware revision:0x90020000
+[    1.243184] [drm] Initialized msm 1.13.0 for ae01000.display-controller on minor 1
+[    1.243277] msm_dpu ae01000.display-controller: Direct firmware load for qcom/gen71500_sqe.fw failed with error -2
+[    1.243283] msm_dpu ae01000.display-controller: [drm:adreno_request_fw [msm]] *ERROR* failed to load gen71500_sqe.fw
+[    1.283935] input: hid-over-i2c 04F3:3313 Mouse as /devices/platform/soc@0/bc0000.geniqup/b80000.i2c/i2c-0/0-0015/0018:04F3:3313.0001/input/input5
+[    1.284019] input: hid-over-i2c 04F3:3313 Touchpad as /devices/platform/soc@0/bc0000.geniqup/b80000.i2c/i2c-0/0-0015/0018:04F3:3313.0001/input/input6
+[    1.284103] hid-multitouch 0018:04F3:3313.0001: input,hidraw0: I2C HID v1.00 Mouse [hid-over-i2c 04F3:3313] on 0-0015
+[    1.509186] Console: switching to colour frame buffer device 240x75
+[    1.509201] fb0: sys_imageblit: framebuffer is not in virtual address space.
+[    1.530774] msm_dpu ae01000.display-controller: [drm] fb0: msmdrmfb frame buffer device
+[    1.532884] vreg_bob1: Setting 3008000-3960000uV
+[    1.533051] vreg_bob2: Setting 2504000-3008000uV
+[    1.533110] vreg_l1d_0p8: Setting 880000-920000uV
+[    1.533183] vreg_l2b_3p0: Setting 3072000-3100000uV
+[    1.533336] vreg_l2d_0p9: Setting 912000-920000uV
+[    1.533354] vreg_l4b_1p8: Setting 1800000-1800000uV
+[    1.533439] vreg_l3d_1p8: Setting 1800000-1800000uV
+[    1.533562] vreg_l3i_0p8: Setting 880000-920000uV
+[    1.534036] vreg_l13b_3p0: Setting 3072000-3072000uV
+[    1.534333] vreg_l14b_3p0: Setting 3072000-3072000uV
+[    1.534430] vreg_l15b_1p8: Setting 1800000-1800000uV
+[    1.535412] qcom_pmic_glink pmic-glink: Failed to create device link (0x180) with supplier fda000.phy for /pmic-glink/connector@1
+[    1.541819] qcom-pcie 1bf8000.pci: supply vdda not found, using dummy regulator
+[    1.543567] qcom-pcie 1bf8000.pci: host bridge /soc@0/pci@1bf8000 ranges:
+[    1.543599] qcom-pcie 1bf8000.pci:       IO 0x0070200000..0x00702fffff -> 0x0000000000
+[    1.543629] qcom-pcie 1bf8000.pci:      MEM 0x0070300000..0x0073ffffff -> 0x0070300000
+[    1.543797] qcom-pcie 1c08000.pci: supply vdda not found, using dummy regulator
+[    1.543855] qcom-pcie 1c08000.pci: supply vddpe-3v3 not found, using dummy regulator
+[    1.543931] qcom-pcie 1c08000.pci: host bridge /soc@0/pci@1c08000 ranges:
+[    1.543959] qcom-pcie 1c08000.pci:       IO 0x007c200000..0x007c2fffff -> 0x0000000000
+[    1.543987] qcom-pcie 1c08000.pci:      MEM 0x007c300000..0x007dffffff -> 0x007c300000
+[    1.546751] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[    1.546792] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 1
+[    1.546928] xhci-hcd xhci-hcd.1.auto: USB3 root hub has no ports
+[    1.546964] xhci-hcd xhci-hcd.1.auto: hcc params 0x0220fe65 hci version 0x110 quirks 0x0000808000000010
+[    1.547026] xhci-hcd xhci-hcd.1.auto: irq 191, io mem 0x0a200000
+[    1.547176] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 7.00
+[    1.547207] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.547231] usb usb1: Product: xHCI Host Controller
+[    1.547249] usb usb1: Manufacturer: Linux 7.0.0-30-generic xhci-hcd
+[    1.547270] usb usb1: SerialNumber: xhci-hcd.1.auto
+[    1.547408] hub 1-0:1.0: USB hub found
+[    1.547432] hub 1-0:1.0: 1 port detected
+[    1.553471] xhci-hcd xhci-hcd.2.auto: xHCI Host Controller
+[    1.553499] xhci-hcd xhci-hcd.2.auto: new USB bus registered, assigned bus number 2
+[    1.555952] xhci-hcd xhci-hcd.2.auto: hcc params 0x0118ffc5 hci version 0x110 quirks 0x0000808000000810
+[    1.556012] xhci-hcd xhci-hcd.2.auto: irq 192, io mem 0x0a400000
+[    1.556099] xhci-hcd xhci-hcd.2.auto: xHCI Host Controller
+[    1.556119] xhci-hcd xhci-hcd.2.auto: new USB bus registered, assigned bus number 3
+[    1.556152] xhci-hcd xhci-hcd.2.auto: Host supports USB 3.1 Enhanced SuperSpeed
+[    1.556232] usb usb2: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 7.00
+[    1.556260] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.556284] usb usb2: Product: xHCI Host Controller
+[    1.556301] usb usb2: Manufacturer: Linux 7.0.0-30-generic xhci-hcd
+[    1.556322] usb usb2: SerialNumber: xhci-hcd.2.auto
+[    1.557432] fb0: sys_fillrect: framebuffer is not in virtual address space.
+[    1.558772] hub 2-0:1.0: USB hub found
+[    1.560229] hub 2-0:1.0: 2 ports detected
+[    1.561600] usb usb3: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 7.00
+[    1.562797] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.564000] usb usb3: Product: xHCI Host Controller
+[    1.565197] usb usb3: Manufacturer: Linux 7.0.0-30-generic xhci-hcd
+[    1.566391] usb usb3: SerialNumber: xhci-hcd.2.auto
+[    1.567657] hub 3-0:1.0: USB hub found
+[    1.568850] hub 3-0:1.0: 2 ports detected
+[    1.594731] xhci-hcd xhci-hcd.3.auto: xHCI Host Controller
+[    1.595943] xhci-hcd xhci-hcd.3.auto: new USB bus registered, assigned bus number 4
+[    1.599534] xhci-hcd xhci-hcd.3.auto: hcc params 0x0110ffc5 hci version 0x110 quirks 0x0000808000000810
+[    1.600754] xhci-hcd xhci-hcd.3.auto: irq 193, io mem 0x0a600000
+[    1.602003] xhci-hcd xhci-hcd.3.auto: xHCI Host Controller
+[    1.603176] xhci-hcd xhci-hcd.3.auto: new USB bus registered, assigned bus number 5
+[    1.604349] xhci-hcd xhci-hcd.3.auto: Host supports USB 3.1 Enhanced SuperSpeed
+[    1.605569] usb usb4: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 7.00
+[    1.606742] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.607906] usb usb4: Product: xHCI Host Controller
+[    1.609058] usb usb4: Manufacturer: Linux 7.0.0-30-generic xhci-hcd
+[    1.610223] usb usb4: SerialNumber: xhci-hcd.3.auto
+[    1.611561] hub 4-0:1.0: USB hub found
+[    1.612704] hub 4-0:1.0: 1 port detected
+[    1.613938] usb usb5: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 7.00
+[    1.615039] usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.616118] usb usb5: Product: xHCI Host Controller
+[    1.617176] usb usb5: Manufacturer: Linux 7.0.0-30-generic xhci-hcd
+[    1.618235] usb usb5: SerialNumber: xhci-hcd.3.auto
+[    1.619385] hub 5-0:1.0: USB hub found
+[    1.620426] hub 5-0:1.0: 1 port detected
+[    1.623665] qcom_pmic_glink pmic-glink: Failed to create device link (0x180) with supplier a600000.usb for /pmic-glink/connector@0
+[    1.648926] xhci-hcd xhci-hcd.4.auto: xHCI Host Controller
+[    1.650044] xhci-hcd xhci-hcd.4.auto: new USB bus registered, assigned bus number 6
+[    1.653582] xhci-hcd xhci-hcd.4.auto: hcc params 0x0110ffc5 hci version 0x110 quirks 0x0000808000000810
+[    1.654736] xhci-hcd xhci-hcd.4.auto: irq 194, io mem 0x0a800000
+[    1.655927] xhci-hcd xhci-hcd.4.auto: xHCI Host Controller
+[    1.657051] xhci-hcd xhci-hcd.4.auto: new USB bus registered, assigned bus number 7
+[    1.658188] xhci-hcd xhci-hcd.4.auto: Host supports USB 3.1 Enhanced SuperSpeed
+[    1.659403] usb usb6: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 7.00
+[    1.659787] qcom-pcie 1bf8000.pci: iATU: unroll T, 8 ob, 8 ib, align 4K, limit 1024G
+[    1.660566] usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.662856] usb usb6: Product: xHCI Host Controller
+[    1.663990] usb usb6: Manufacturer: Linux 7.0.0-30-generic xhci-hcd
+[    1.665126] usb usb6: SerialNumber: xhci-hcd.4.auto
+[    1.666465] hub 6-0:1.0: USB hub found
+[    1.667614] hub 6-0:1.0: 1 port detected
+[    1.668877] usb usb7: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 7.00
+[    1.670027] usb usb7: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.671173] usb usb7: Product: xHCI Host Controller
+[    1.672323] usb usb7: Manufacturer: Linux 7.0.0-30-generic xhci-hcd
+[    1.673470] usb usb7: SerialNumber: xhci-hcd.4.auto
+[    1.674788] hub 7-0:1.0: USB hub found
+[    1.675957] hub 7-0:1.0: 1 port detected
+[    1.677444] qcom_pmic_glink pmic-glink: Failed to create device link (0x180) with supplier a800000.usb for /pmic-glink/connector@1
+[    1.679454] qcom-pcie 1c08000.pci: supply vdda not found, using dummy regulator
+[    1.680647] qcom-pcie 1c08000.pci: supply vddpe-3v3 not found, using dummy regulator
+[    1.681858] qcom-pcie 1c08000.pci: host bridge /soc@0/pci@1c08000 ranges:
+[    1.683018] qcom-pcie 1c08000.pci:       IO 0x007c200000..0x007c2fffff -> 0x0000000000
+[    1.684181] qcom-pcie 1c08000.pci:      MEM 0x007c300000..0x007dffffff -> 0x007c300000
+[    1.858317] qcom-pcie 1bf8000.pci: PCIe Gen.4 x4 link up
+[    1.859702] qcom-pcie 1bf8000.pci: PCI host bridge to bus 0006:00
+[    1.860860] pci_bus 0006:00: root bus resource [bus 00-ff]
+[    1.862019] pci_bus 0006:00: root bus resource [io  0x0000-0xfffff]
+[    1.863193] pci_bus 0006:00: root bus resource [mem 0x70300000-0x73ffffff]
+[    1.864355] pci 0006:00:00.0: [17cb:0111] type 01 class 0x060400 PCIe Root Port
+[    1.865510] pci 0006:00:00.0: BAR 0 [mem 0x00000000-0x00000fff]
+[    1.866661] pci 0006:00:00.0: PCI bridge to [bus 01-ff]
+[    1.867805] pci 0006:00:00.0:   bridge window [io  0x0000-0x0fff]
+[    1.868948] pci 0006:00:00.0:   bridge window [mem 0x00000000-0x000fffff]
+[    1.870081] pci 0006:00:00.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[    1.871240] pci 0006:00:00.0: PME# supported from D0 D3hot D3cold
+[    1.873420] pci 0006:01:00.0: [1344:5425] type 00 class 0x010802 PCIe Endpoint
+[    1.874724] pci 0006:01:00.0: BAR 0 [mem 0x00000000-0x00003fff 64bit]
+[    1.878229] pci 0006:01:00.0: ASPM: default states L1
+[    1.879433] pci 0006:00:00.0: bridge window [io  0x1000-0x0fff] to [bus 01-ff] add_size 1000
+[    1.880560] pci 0006:00:00.0: bridge window [mem 0x00100000-0x000fffff 64bit pref] to [bus 01-ff] add_size 200000 add_align 100000
+[    1.881712] pci 0006:00:00.0: bridge window [mem 0x00100000-0x001fffff] to [bus 01-ff] add_size 100000 add_align 100000
+[    1.882863] pci 0006:00:00.0: bridge window [mem 0x70300000-0x704fffff]: assigned
+[    1.883998] pci 0006:00:00.0: bridge window [mem 0x70500000-0x706fffff 64bit pref]: assigned
+[    1.885131] pci 0006:00:00.0: BAR 0 [mem 0x70700000-0x70700fff]: assigned
+[    1.886261] pci 0006:00:00.0: bridge window [io  0x1000-0x1fff]: assigned
+[    1.887388] pci 0006:01:00.0: BAR 0 [mem 0x70300000-0x70303fff 64bit]: assigned
+[    1.888552] pci 0006:00:00.0: PCI bridge to [bus 01-ff]
+[    1.889685] pci 0006:00:00.0:   bridge window [io  0x1000-0x1fff]
+[    1.890819] pci 0006:00:00.0:   bridge window [mem 0x70300000-0x704fffff]
+[    1.891949] pci 0006:00:00.0:   bridge window [mem 0x70500000-0x706fffff 64bit pref]
+[    1.893089] pci_bus 0006:00: resource 4 [io  0x0000-0xfffff]
+[    1.894224] pci_bus 0006:00: resource 5 [mem 0x70300000-0x73ffffff]
+[    1.895345] usb 3-1: new SuperSpeed USB device number 2 using xhci-hcd
+[    1.896468] pci_bus 0006:01: resource 0 [io  0x1000-0x1fff]
+[    1.897588] pci_bus 0006:01: resource 1 [mem 0x70300000-0x704fffff]
+[    1.898696] pci_bus 0006:01: resource 2 [mem 0x70500000-0x706fffff 64bit pref]
+[    1.903413] pcieport 0006:00:00.0: PME: Signaling with IRQ 201
+[    1.905496] qcom-pcie 1c08000.pci: supply vdda not found, using dummy regulator
+[    1.906647] qcom-pcie 1c08000.pci: supply vddpe-3v3 not found, using dummy regulator
+[    1.906664] pcieport 0006:00:00.0: AER: enabled with IRQ 196
+[    1.907826] qcom-pcie 1c08000.pci: host bridge /soc@0/pci@1c08000 ranges:
+[    1.908894] pcieport 0006:00:00.0: pciehp: Slot #0 AttnBtn+ PwrCtrl+ MRL+ AttnInd+ PwrInd+ HotPlug+ Surprise+ Interlock+ NoCompl+ IbPresDis- LLActRep+
+[    1.910012] qcom-pcie 1c08000.pci:       IO 0x007c200000..0x007c2fffff -> 0x0000000000
+[    1.912338] qcom-pcie 1c08000.pci:      MEM 0x007c300000..0x007dffffff -> 0x007c300000
+[    1.913637] usb 3-1: New USB device found, idVendor=03f0, idProduct=3e07, bcdDevice= 1.10
+[    1.914801] usb 3-1: New USB device strings: Mfr=2, Product=3, SerialNumber=4
+[    1.915964] usb 3-1: Product: HP755w
+[    1.917158] usb 3-1: Manufacturer: hp
+[    1.918314] usb 3-1: SerialNumber: 10356533
+[    1.920811] qcom-pcie 1c08000.pci: supply vdda not found, using dummy regulator
+[    1.921972] qcom-pcie 1c08000.pci: supply vddpe-3v3 not found, using dummy regulator
+[    1.923155] qcom-pcie 1c08000.pci: host bridge /soc@0/pci@1c08000 ranges:
+[    1.924284] qcom-pcie 1c08000.pci:       IO 0x007c200000..0x007c2fffff -> 0x0000000000
+[    1.925409] qcom-pcie 1c08000.pci:      MEM 0x007c300000..0x007dffffff -> 0x007c300000
+[    1.927479] usb-storage 3-1:1.0: USB Mass Storage device detected
+[    1.928813] scsi host0: usb-storage 3-1:1.0
+[    1.930031] usbcore: registered new interface driver usb-storage
+[    1.933855] qcom-pcie 1c08000.pci: supply vdda not found, using dummy regulator
+[    1.935008] qcom-pcie 1c08000.pci: supply vddpe-3v3 not found, using dummy regulator
+[    1.936165] qcom-pcie 1c08000.pci: host bridge /soc@0/pci@1c08000 ranges:
+[    1.937277] qcom-pcie 1c08000.pci:       IO 0x007c200000..0x007c2fffff -> 0x0000000000
+[    1.938402] qcom-pcie 1c08000.pci:      MEM 0x007c300000..0x007dffffff -> 0x007c300000
+[    1.938640] Key type psk registered
+[    1.938715] usbcore: registered new interface driver uas
+[    1.956174] nvme nvme0: pci function 0006:01:00.0
+[    1.957293] nvme 0006:01:00.0: enabling device (0000 -> 0002)
+[    1.979523] hwmon hwmon4: temp1_input not attached to any thermal zone
+[    1.980703] hwmon hwmon4: temp2_input not attached to any thermal zone
+[    1.987803] nvme nvme0: allocated 64 MiB host memory buffer (2 segments).
+[    2.009062] nvme nvme0: 8/0/0 default/read/poll queues
+[    2.013898]  nvme0n1: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 p16
+[    2.016805] qcom-pcie 1c08000.pci: supply vdda not found, using dummy regulator
+[    2.017953] qcom-pcie 1c08000.pci: supply vddpe-3v3 not found, using dummy regulator
+[    2.019108] qcom-pcie 1c08000.pci: host bridge /soc@0/pci@1c08000 ranges:
+[    2.020200] qcom-pcie 1c08000.pci:       IO 0x007c200000..0x007c2fffff -> 0x0000000000
+[    2.021294] qcom-pcie 1c08000.pci:      MEM 0x007c300000..0x007dffffff -> 0x007c300000
+[    3.233175] raid6: neonx8   gen() 25823 MB/s
+[    3.251172] raid6: neonx4   gen() 18868 MB/s
+[    3.269176] raid6: neonx2   gen()  9843 MB/s
+[    3.287180] raid6: neonx1   gen()  5061 MB/s
+[    3.305187] raid6: int64x8  gen()  2474 MB/s
+[    3.323173] raid6: int64x4  gen()  9782 MB/s
+[    3.341179] raid6: int64x2  gen()  5310 MB/s
+[    3.359180] raid6: int64x1  gen()  2897 MB/s
+[    3.360235] raid6: using algorithm neonx8 gen() 25823 MB/s
+[    3.378135] raid6: .... xor() 18376 MB/s, rmw enabled
+[    3.379187] raid6: using neon recovery algorithm
+[    3.386891] xor: measuring software checksum speed
+[    3.388306]    8regs           :  9445 MB/sec
+[    3.389702]    32regs          :  9639 MB/sec
+[    3.391056]    arm64_neon      : 10735 MB/sec
+[    3.392094] xor: using function: arm64_neon (10735 MB/sec)
+[    3.396489] async_tx: api initialized (async)
+[   13.285393] qcom-pcie 1c08000.pci: supply vdda not found, using dummy regulator
+[   13.285499] platform 6d44000.codec: deferred probe pending: va_macro: unable to get macro clock
+[   13.286427] qcom-pcie 1c08000.pci: supply vddpe-3v3 not found, using dummy regulator
+[   13.287357] platform c42d000.spmi:pmic@0:rtc@6100: deferred probe pending: (reason unknown)
+[   13.288402] qcom-pcie 1c08000.pci: host bridge /soc@0/pci@1c08000 ranges:
+[   13.289358] platform 6e80000.pinctrl: deferred probe pending: qcom-sm8550-lpass-lpi-pinctrl: Failed to get clk 'core'
+[   13.289455] scsi 0:0:0:0: Direct-Access     hp       x755w            0000 PQ: 0 ANSI: 6
+[   13.290179] scsi 0:0:0:0: Attached scsi generic sg0 type 0
+[   13.290359] qcom-pcie 1c08000.pci:       IO 0x007c200000..0x007c2fffff -> 0x0000000000
+[   13.291431] platform 6ac0000.codec: deferred probe pending: platform: supplier 6d44000.codec not ready
+[   13.292386] qcom-pcie 1c08000.pci:      MEM 0x007c300000..0x007dffffff -> 0x007c300000
+[   13.296439] platform 6ae0000.codec: deferred probe pending: platform: supplier 6d44000.codec not ready
+[   13.297471] platform 6aa0000.codec: deferred probe pending: platform: supplier 6d44000.codec not ready
+[   13.298483] platform 6b00000.codec: deferred probe pending: platform: supplier 6d44000.codec not ready
+[   13.298528] sd 0:0:0:0: [sda] 122880000 512-byte logical blocks: (62.9 GB/58.6 GiB)
+[   13.299472] qnoc-x1e80100 1500000.interconnect: sync_state() pending due to 1c08000.pci
+[   13.301498] qnoc-x1e80100 interconnect-1: sync_state() pending due to 1c08000.pci
+[   13.302522] qnoc-x1e80100 1740000.interconnect: sync_state() pending due to 1c08000.pci
+[   13.303551] gcc-x1e80100 100000.clock-controller: sync_state() pending due to 1c08000.pci
+[   13.303629] sd 0:0:0:0: [sda] Write Protect is off
+[   13.304577] gcc-x1e80100 100000.clock-controller: sync_state() pending due to 3d6a000.gmu
+[   13.305602] sd 0:0:0:0: [sda] Mode Sense: 23 00 00 00
+[   13.306705] gpucc-x1p42100 3d90000.clock-controller: sync_state() pending due to 3d6a000.gmu
+[   13.307766] qnoc-x1e80100 26400000.interconnect: sync_state() pending due to 1c08000.pci
+[   13.308935] sd 0:0:0:0: [sda] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[   13.357889]  sda: sda1
+[   13.359225] sd 0:0:0:0: [sda] Attached SCSI removable disk
+[   13.361696] qcom-pcie 1c08000.pci: supply vdda not found, using dummy regulator
+[   13.362822] qcom-pcie 1c08000.pci: supply vddpe-3v3 not found, using dummy regulator
+[   13.363996] qcom-pcie 1c08000.pci: host bridge /soc@0/pci@1c08000 ranges:
+[   13.365088] qcom-pcie 1c08000.pci:       IO 0x007c200000..0x007c2fffff -> 0x0000000000
+[   13.366177] qcom-pcie 1c08000.pci:      MEM 0x007c300000..0x007dffffff -> 0x007c300000
+[   14.075485] loop0: detected capacity change from 0 to 6080080
+[   14.112699] loop1: detected capacity change from 0 to 998688
+[   14.148479] loop2: detected capacity change from 0 to 274880
+[   14.156539] overlayfs: null uuid in non-single lower fs '/', falling back to xino=off,index=off,nfs_export=off.
+[   15.099773] evm: overlay not supported
+[   23.929498] systemd[1]: System time advanced to built-in epoch: Mon 2026-07-27 20:44:02 UTC
+[   24.171672] systemd[1]: Inserted module 'autofs4'
+[   24.224160] systemd[1]: systemd 259.5-0ubuntu3.4 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +IPE +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +BTF -XKBCOMMON -UTMP +SYSVINIT +LIBARCHIVE)
+[   24.226815] systemd[1]: Detected architecture arm64.
+[   24.245224] systemd[1]: Initializing machine ID from random generator.
+[   24.246596] systemd[1]: Hostname set to <ubuntu>.
+[   24.353610] systemd[1]: bpf-restrict-fs: BPF LSM hook not enabled in the kernel, BPF LSM not supported.
+[   24.837857] systemd[1]: /usr/lib/systemd/system/xfs_scrub_all.service:26: Support for option CPUAccounting= has been removed and it is ignored
+[   24.839527] systemd[1]: /usr/lib/systemd/system/system-xfs_scrub.slice:15: Support for option CPUAccounting= has been removed and it is ignored
+[   24.946989] systemd[1]: Queued start job for default target graphical.target.
+[   24.962045] systemd[1]: Created slice system-cups.slice - CUPS Slice.
+[   24.965081] systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+[   24.968410] systemd[1]: Created slice system-xfs_scrub.slice - xfs_scrub background service slice.
+[   24.971329] systemd[1]: Created slice user.slice - User and Session Slice.
+[   24.974095] systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+[   24.977062] systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+[   24.979986] systemd[1]: Reached target imports.target - Image Downloads.
+[   24.982941] systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+[   24.985950] systemd[1]: Reached target remote-fs.target - Remote File Systems.
+[   24.988947] systemd[1]: Reached target slices.target - Slice Units.
+[   24.991916] systemd[1]: Reached target swap.target - Swaps.
+[   24.994872] systemd[1]: Reached target time-set.target - System Time Set.
+[   24.997897] systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+[   25.001033] systemd[1]: Listening on dm-event.socket - Device-mapper event daemon FIFOs.
+[   25.004219] systemd[1]: Listening on lvm2-lvmpolld.socket - LVM2 poll daemon socket.
+[   25.007416] systemd[1]: Listening on syslog.socket - Syslog Socket.
+[   25.011147] systemd[1]: Listening on systemd-ask-password.socket - Query the User Interactively for a Password.
+[   25.014763] systemd[1]: Listening on systemd-creds.socket - Credential Encryption/Decryption.
+[   25.018598] systemd[1]: Listening on systemd-factory-reset.socket - Factory Reset Management.
+[   25.022007] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+[   25.025408] systemd[1]: Listening on systemd-journald.socket - Journal Sockets.
+[   25.029369] systemd[1]: Listening on systemd-mute-console.socket - Console Output Muting Service Socket.
+[   25.032718] systemd[1]: Listening on systemd-oomd.socket - Userspace Out-Of-Memory (OOM) Killer Socket.
+[   25.036092] systemd[1]: systemd-pcrextend.socket - TPM PCR Measurements skipped, unmet condition check ConditionSecurity=measured-uki
+[   25.037803] systemd[1]: systemd-pcrlock.socket - Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[   25.039563] systemd[1]: Listening on systemd-resolved-monitor.socket - Resolve Monitor Varlink Socket.
+[   25.043066] systemd[1]: Listening on systemd-resolved-varlink.socket - Resolve Service Varlink Socket.
+[   25.046627] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+[   25.050216] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+[   25.053899] systemd[1]: Listening on systemd-udevd-varlink.socket - udev Varlink Socket.
+[   25.064649] systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+[   25.069017] systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+[   25.074808] systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+[   25.079083] systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+[   25.084240] systemd[1]: Starting systemd-journald.service - Journal Service...
+[   25.088476] systemd[1]: Starting blk-availability.service - Availability of block devices...
+[   25.092780] systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...
+[   25.108208] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+[   25.122645] systemd[1]: Starting lvm2-monitor.service - Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+[   25.126580] systemd[1]: modprobe@configfs.service - Load Kernel Module configfs skipped, unmet condition check ConditionKernelModuleLoaded=!configfs
+[   25.128895] systemd[1]: Mounting sys-kernel-config.mount - Kernel Configuration File System...
+[   25.132727] systemd[1]: modprobe@drm.service - Load Kernel Module drm skipped, unmet condition check ConditionKernelModuleLoaded=!drm
+[   25.135147] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+[   25.139037] systemd[1]: modprobe@fuse.service - Load Kernel Module fuse skipped, unmet condition check ConditionKernelModuleLoaded=!fuse
+[   25.141513] systemd[1]: Mounting sys-fs-fuse-connections.mount - FUSE Control File System...
+[   25.145605] systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+[   25.151556] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+[   25.155602] systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+[   25.157598] systemd[1]: systemd-pcrproduct.service - TPM NvPCR Product ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+[   25.160053] systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+[   25.164090] systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[   25.172358] systemd[1]: Starting systemd-udev-load-credentials.service - Load udev Rules from Credentials...
+[   25.177020] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+[   25.182787] systemd[1]: Finished blk-availability.service - Availability of block devices.
+[   25.187289] systemd[1]: Finished kmod-static-nodes.service - Create List of Static Device Nodes.
+[   25.191960] systemd[1]: Starting systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully...
+[   25.197795] systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+[   25.200701] systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+[   25.205762] systemd[1]: Mounted dev-hugepages.mount - Huge Pages File System.
+[   25.209996] systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
+[   25.214247] systemd[1]: Mounted sys-kernel-debug.mount - Kernel Debug File System.
+[   25.218413] systemd[1]: Mounted sys-kernel-tracing.mount - Kernel Trace File System.
+[   25.222587] systemd[1]: Mounted sys-kernel-config.mount - Kernel Configuration File System.
+[   25.226780] systemd[1]: Mounted sys-fs-fuse-connections.mount - FUSE Control File System.
+[   25.231048] systemd[1]: Finished systemd-remount-fs.service - Remount Root and Kernel File Systems.
+[   25.236266] systemd[1]: Starting cloud-init-main.service - Cloud-init: Single Process...
+[   25.264549] systemd[1]: systemd-hwdb-update.service - Rebuild Hardware Database skipped, no trigger condition checks were met.
+[   25.266628] systemd[1]: systemd-pstore.service - Platform Persistent Storage Archival skipped, unmet condition check ConditionDirectoryNotEmpty=/sys/fs/pstore
+[   25.269273] systemd[1]: Starting systemd-random-seed.service - Load/Save OS Random Seed...
+[   25.273415] systemd[1]: systemd-tpm2-setup.service - TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[   25.275483] systemd[1]: systemd-pcrnvdone.service - TPM PCR NvPCR Initialization Separator skipped, unmet condition check ConditionSecurity=measured-uki
+[   25.289308] systemd-journald[2916]: Collecting audit messages is disabled.
+[   25.289474] systemd[1]: Finished systemd-modules-load.service - Load Kernel Modules.
+[   25.295935] systemd[1]: Finished systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+[   25.301337] systemd[1]: Starting systemd-sysctl.service - Apply Kernel Variables...
+[   25.313517] systemd[1]: Finished systemd-random-seed.service - Load/Save OS Random Seed.
+[   25.323488] systemd[1]: Finished systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully.
+[   25.328908] systemd[1]: Starting systemd-sysusers.service - Create System Users...
+[   25.342430] systemd[1]: Started systemd-journald.service - Journal Service.
+[   25.397611] systemd-journald[2916]: Received client request to flush runtime journal.
+[   25.573694] synth uevent: /devices/platform/pmic-glink/pmic_glink.power-supply.0/power_supply/qcom-battmgr-ac: failed to send uevent
+[   25.573702] power_supply qcom-battmgr-ac: uevent: failed to send synthetic uevent: -11
+[   25.575743] synth uevent: /devices/platform/pmic-glink/pmic_glink.power-supply.0/power_supply/qcom-battmgr-bat: failed to send uevent
+[   25.575744] power_supply qcom-battmgr-bat: uevent: failed to send synthetic uevent: -11
+[   25.577728] synth uevent: /devices/platform/pmic-glink/pmic_glink.power-supply.0/power_supply/qcom-battmgr-usb: failed to send uevent
+[   25.577730] power_supply qcom-battmgr-usb: uevent: failed to send synthetic uevent: -11
+[   25.579687] synth uevent: /devices/platform/pmic-glink/pmic_glink.power-supply.0/power_supply/qcom-battmgr-wls: failed to send uevent
+[   25.579688] power_supply qcom-battmgr-wls: uevent: failed to send synthetic uevent: -11
+[   26.113155] qcomtee: QTEE version 5.2.0
+[   26.118020] qcom-pcie 1c08000.pci: supply vdda not found, using dummy regulator
+[   26.128571] qcom-pcie 1c08000.pci: supply vddpe-3v3 not found, using dummy regulator
+[   26.138371] qcom-pcie 1c08000.pci: host bridge /soc@0/pci@1c08000 ranges:
+[   26.138384] qcom-pcie 1c08000.pci:       IO 0x007c200000..0x007c2fffff -> 0x0000000000
+[   26.138390] qcom-pcie 1c08000.pci:      MEM 0x007c300000..0x007dffffff -> 0x007c300000
+[   26.211617] qcom-pcie 1c08000.pci: supply vdda not found, using dummy regulator
+[   26.216184] qcom-pcie 1c08000.pci: supply vddpe-3v3 not found, using dummy regulator
+[   26.230243] qcom-pcie 1c08000.pci: host bridge /soc@0/pci@1c08000 ranges:
+[   26.230255] qcom-pcie 1c08000.pci:       IO 0x007c200000..0x007c2fffff -> 0x0000000000
+[   26.230260] qcom-pcie 1c08000.pci:      MEM 0x007c300000..0x007dffffff -> 0x007c300000
+[   26.281181] EDAC DEVICE0: Giving out device to module qcom_llcc_edac controller llcc: DEV qcom_llcc_edac (INTERRUPT)
+[   26.395685] qcom-pcie 1c08000.pci: iATU: unroll T, 8 ob, 8 ib, align 4K, limit 1024G
+[   26.410706] input: pmic_pwrkey as /devices/platform/soc@0/c400000.arbiter/spmi-0/0-00/c42d000.spmi:pmic@0:pon@1300/c42d000.spmi:pmic@0:pon@1300:pwrkey/input/input7
+[   26.423409] Bluetooth: Core ver 2.22
+[   26.423885] NET: Registered PF_BLUETOOTH protocol family
+[   26.423887] Bluetooth: HCI device and connection manager initialized
+[   26.423890] Bluetooth: HCI socket layer initialized
+[   26.423893] Bluetooth: L2CAP socket layer initialized
+[   26.423897] Bluetooth: SCO socket layer initialized
+[   26.595185] qcom-pcie 1c08000.pci: PCIe Gen.3 x1 link up
+[   26.602163] qcom-pcie 1c08000.pci: PCI host bridge to bus 0004:00
+[   26.602168] pci_bus 0004:00: root bus resource [bus 00-ff]
+[   26.602172] pci_bus 0004:00: root bus resource [io  0x100000-0x1fffff] (bus address [0x0000-0xfffff])
+[   26.602174] pci_bus 0004:00: root bus resource [mem 0x7c300000-0x7dffffff]
+[   26.602212] pci 0004:00:00.0: [17cb:0111] type 01 class 0x060400 PCIe Root Port
+[   26.602221] pci 0004:00:00.0: BAR 0 [mem 0x00000000-0x00000fff]
+[   26.602224] pci 0004:00:00.0: PCI bridge to [bus 01-ff]
+[   26.602228] pci 0004:00:00.0:   bridge window [io  0x100000-0x100fff]
+[   26.602230] pci 0004:00:00.0:   bridge window [mem 0x00000000-0x000fffff]
+[   26.602234] pci 0004:00:00.0:   bridge window [mem 0x00000000-0x000fffff 64bit pref]
+[   26.602259] pci 0004:00:00.0: PME# supported from D0 D3hot D3cold
+[   26.610414] pci 0004:01:00.0: [17cb:1103] type 00 class 0x028000 PCIe Endpoint
+[   26.610589] pci 0004:01:00.0: BAR 0 [mem 0x00000000-0x001fffff 64bit]
+[   26.610953] pci 0004:01:00.0: PME# supported from D0 D3hot D3cold
+[   26.619189] pci 0004:01:00.0: ASPM: default states L1
+[   26.619267] pci 0004:00:00.0: bridge window [io  0x1000-0x0fff] to [bus 01-ff] add_size 1000
+[   26.619270] pci 0004:00:00.0: bridge window [mem 0x00100000-0x000fffff 64bit pref] to [bus 01-ff] add_size 200000 add_align 100000
+[   26.619278] pci 0004:00:00.0: bridge window [mem 0x7c400000-0x7c5fffff]: assigned
+[   26.619281] pci 0004:00:00.0: bridge window [mem 0x7c600000-0x7c7fffff 64bit pref]: assigned
+[   26.619282] pci 0004:00:00.0: BAR 0 [mem 0x7c300000-0x7c300fff]: assigned
+[   26.619285] pci 0004:00:00.0: bridge window [io  0x100000-0x100fff]: assigned
+[   26.619289] pci 0004:01:00.0: BAR 0 [mem 0x7c400000-0x7c5fffff 64bit]: assigned
+[   26.619324] pci 0004:00:00.0: PCI bridge to [bus 01-ff]
+[   26.619326] pci 0004:00:00.0:   bridge window [io  0x100000-0x100fff]
+[   26.619328] pci 0004:00:00.0:   bridge window [mem 0x7c400000-0x7c5fffff]
+[   26.619331] pci 0004:00:00.0:   bridge window [mem 0x7c600000-0x7c7fffff 64bit pref]
+[   26.619333] pci_bus 0004:00: resource 4 [io  0x100000-0x1fffff]
+[   26.619335] pci_bus 0004:00: resource 5 [mem 0x7c300000-0x7dffffff]
+[   26.619337] pci_bus 0004:01: resource 0 [io  0x100000-0x100fff]
+[   26.619338] pci_bus 0004:01: resource 1 [mem 0x7c400000-0x7c5fffff]
+[   26.619340] pci_bus 0004:01: resource 2 [mem 0x7c600000-0x7c7fffff 64bit pref]
+[   26.662278] pcieport 0004:00:00.0: PME: Signaling with IRQ 226
+[   26.671630] pcieport 0004:00:00.0: AER: enabled with IRQ 226
+[   26.671721] pcieport 0004:00:00.0: pciehp: Slot #0 AttnBtn+ PwrCtrl+ MRL+ AttnInd+ PwrInd+ HotPlug+ Surprise+ Interlock+ NoCompl+ IbPresDis- LLActRep+
+[   26.758763] Bluetooth: HCI UART driver ver 2.3
+[   26.758773] Bluetooth: HCI UART protocol H4 registered
+[   26.758773] Bluetooth: HCI UART protocol BCSP registered
+[   26.758797] Bluetooth: HCI UART protocol LL registered
+[   26.758797] Bluetooth: HCI UART protocol ATH3K registered
+[   26.758805] Bluetooth: HCI UART protocol Three-wire (H5) registered
+[   26.759075] Bluetooth: HCI UART protocol Intel registered
+[   26.759111] Bluetooth: HCI UART protocol Broadcom registered
+[   26.759130] Bluetooth: HCI UART protocol QCA registered
+[   26.759131] Bluetooth: HCI UART protocol AG6XX registered
+[   26.759299] Bluetooth: HCI UART protocol Marvell registered
+[   26.759306] Bluetooth: HCI UART protocol AML registered
+[   26.761194] Bluetooth: hci0: setting up wcn6855
+[   26.808951] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[   26.809322] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[   26.809555] Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+[   26.880902] Bluetooth: hci0: QCA Product ID   :0x00000013
+[   26.880909] Bluetooth: hci0: QCA SOC Version  :0x400c1211
+[   26.880910] Bluetooth: hci0: QCA ROM Version  :0x00000201
+[   26.880911] Bluetooth: hci0: QCA Patch Version:0x000038e6
+[   26.891499] Bluetooth: hci0: QCA controller version 0x12110201
+[   26.891505] Bluetooth: hci0: QCA Downloading qca/wcnhpbtfw21.tlv
+[   26.896744] ath11k_pci 0004:01:00.0: BAR 0 [mem 0x7c400000-0x7c5fffff 64bit]: assigned
+[   26.896838] ath11k_pci 0004:01:00.0: enabling device (0000 -> 0002)
+[   26.898835] ath11k_pci 0004:01:00.0: MSI vectors: 32
+[   26.898866] ath11k_pci 0004:01:00.0: wcn6855 hw2.1
+[   27.067567] mhi mhi0: Requested to power ON
+[   27.067581] mhi mhi0: Power on setup success
+[   27.220274] mhi mhi0: Wait for device to enter SBL or Mission mode
+[   27.632422] Bluetooth: hci0: QCA Downloading qca/wcnhpnv21g.b10c
+[   27.844893] Bluetooth: hci0: QCA setup on UART is completed
+[   27.844957] Bluetooth: hci0: HFP non-HCI data transport is supported
+[   27.863124] ath11k_pci 0004:01:00.0: chip_id 0x12 chip_family 0xb board_id 0xff soc_id 0x400c1211
+[   27.863132] ath11k_pci 0004:01:00.0: fw_version 0x11088c35 fw_build_timestamp 2024-04-17 08:34 fw_build_id WLAN.HSP.1.1-03125-QCAHSPSWPL_V1_V2_SILICONZ_LITE-3.6510.41
+[   27.885240] Bluetooth: hci0: AOSP extensions version v0.98
+[   27.885246] Bluetooth: hci0: AOSP quality report is supported
+[   27.885272] spl: loading out-of-tree module taints kernel.
+[   27.932936] ath11k_pci 0004:01:00.0: failed to fetch board data for bus=pci,vendor=17cb,device=1103,subsystem-vendor=105b,subsystem-device=e130,qmi-chip-id=18,qmi-board-id=255,variant=AS_SA_S3407QA from ath11k/WCN6855/hw2.1/board-2.bin
+[   27.934832] ath11k_pci 0004:01:00.0: failed to fetch board data for bus=pci,vendor=17cb,device=1103,subsystem-vendor=105b,subsystem-device=e130,qmi-chip-id=18,qmi-board-id=255 from ath11k/WCN6855/hw2.1/board-2.bin
+[   27.936703] ath11k_pci 0004:01:00.0: failed to fetch board data for bus=pci,qmi-chip-id=18 from ath11k/WCN6855/hw2.1/board-2.bin
+[   27.938567] ath11k_pci 0004:01:00.0: failed to fetch board.bin from WCN6855/hw2.1
+[   27.940438] ath11k_pci 0004:01:00.0: qmi failed to fetch board file: -2
+[   27.940440] ath11k_pci 0004:01:00.0: failed to load board data file: -2
+[   27.977215] zfs: module license 'CDDL' taints kernel.
+[   27.977221] Disabling lock debugging due to kernel taint
+[   27.977240] zfs: module license taints kernel.
+[   28.174207] ZFS: Loaded module v2.4.1-1ubuntu5, ZFS pool version 5000, ZFS filesystem version 5
+[   28.174219] ZFS: Using ZFS with kernel 7.0.0-30-generic is EXPERIMENTAL and SERIOUS DATA LOSS may occur!
+[   28.174221] ZFS: Please report your results at: https://github.com/openzfs/zfs/issues/new
+[   28.229123] loop3: detected capacity change from 0 to 126688
+[   28.229216] loop4: detected capacity change from 0 to 40672
+[   28.229409] loop5: detected capacity change from 0 to 8
+[   28.230621] loop6: detected capacity change from 0 to 506936
+[   28.252308] loop7: detected capacity change from 0 to 187776
+[   28.271627] loop8: detected capacity change from 0 to 1132440
+[   28.291435] loop9: detected capacity change from 0 to 438160
+[   28.293459] loop10: detected capacity change from 0 to 215976
+[   28.314087] loop11: detected capacity change from 0 to 385528
+[   28.329725] loop15: detected capacity change from 0 to 1608
+[   30.479632] audit: type=1400 audit(1785185048.548:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap-update-ns.mesa-2404" pid=3452 comm="apparmor_parser"
+[   30.499160] audit: type=1400 audit(1785185048.568:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap-update-ns.ubuntu-desktop-bootstrap" pid=3457 comm="apparmor_parser"
+[   30.546147] audit: type=1400 audit(1785185048.614:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/snap/snapd/27709/usr/lib/snapd/snap-confine" pid=3449 comm="apparmor_parser"
+[   30.728143] audit: type=1400 audit(1785185048.796:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.desktop-security-center.hook.configure" pid=3459 comm="apparmor_parser"
+[   30.850141] audit: type=1400 audit(1785185048.918:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap-update-ns.snap-store" pid=3454 comm="apparmor_parser"
+[   30.857664] audit: type=1400 audit(1785185048.926:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap-update-ns.thunderbird" pid=3456 comm="apparmor_parser"
+[   30.868452] audit: type=1400 audit(1785185048.937:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap-update-ns.prompting-client" pid=3453 comm="apparmor_parser"
+[   30.874647] audit: type=1400 audit(1785185048.943:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap-update-ns.desktop-security-center" pid=3450 comm="apparmor_parser"
+[   30.910957] audit: type=1400 audit(1785185048.979:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.desktop-security-center.desktop-security-center" pid=3458 comm="apparmor_parser"
+[   30.967143] audit: type=1400 audit(1785185049.035:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.firefox.hook.install" pid=3464 comm="apparmor_parser"
+[   48.622665] kauditd_printk_skb: 34 callbacks suppressed
+[   48.622672] audit: type=1400 audit(1785185066.691:46): apparmor="STATUS" operation="profile_load" profile="unconfined" name="rsyslogd" pid=3533 comm="apparmor_parser"
+[   50.669427] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   50.669435] Bluetooth: BNEP filters: protocol multicast
+[   50.669443] Bluetooth: BNEP socket layer initialized
+[   50.670732] Bluetooth: MGMT ver 1.23
+[   50.848235] NET: Registered PF_ALG protocol family
+[   51.033314] Bluetooth: hci0: setting up wcn6855
+[   51.090253] Bluetooth: hci0: QCA Product ID   :0x00000013
+[   51.090257] Bluetooth: hci0: QCA SOC Version  :0x400c1211
+[   51.090259] Bluetooth: hci0: QCA ROM Version  :0x00000201
+[   51.090260] Bluetooth: hci0: QCA Patch Version:0x000038e6
+[   51.101415] Bluetooth: hci0: QCA controller version 0x12110201
+[   51.101420] Bluetooth: hci0: QCA Downloading qca/wcnhpbtfw21.tlv
+[   51.712087] nvme nvme0: using unchecked data buffer
+[   51.750657] block nvme0n1: No UUID available providing old NGUID
+[   51.790598] Bluetooth: hci0: QCA Downloading qca/wcnhpnv21g.b10c
+[   51.969695] Bluetooth: hci0: QCA setup on UART is completed
+[   51.969705] Bluetooth: hci0: HFP non-HCI data transport is supported
+[   52.003625] Bluetooth: hci0: AOSP extensions version v0.98
+[   52.003635] Bluetooth: hci0: AOSP quality report is supported
+[   52.487481] set_capacity_and_notify: 3 callbacks suppressed
+[   52.487489] loop16: detected capacity change from 0 to 8
+[   52.949041] audit: type=1400 audit(1785185071.015:47): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/snapd/snap-confine" pid=3841 comm="apparmor_parser"
+[   53.094510] audit: type=1400 audit(1785185071.163:48): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/snapd/27709/usr/lib/snapd/snap-confine" pid=3851 comm="apparmor_parser"
+[   53.144299] audit: type=1400 audit(1785185071.213:49): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.mesa-2404" pid=3853 comm="apparmor_parser"
+[   53.209129] audit: type=1400 audit(1785185071.277:50): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.mesa-2404.component-monitor" pid=3854 comm="apparmor_parser"
+[   53.210033] audit: type=1400 audit(1785185071.278:51): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.mesa-2404.hook.post-refresh" pid=3858 comm="apparmor_parser"
+[   53.210450] audit: type=1400 audit(1785185071.279:52): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.mesa-2404.hook.disconnect-plug-kernel-gpu-2404" pid=3856 comm="apparmor_parser"
+[   53.211502] audit: type=1400 audit(1785185071.280:53): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.mesa-2404.hook.install" pid=3857 comm="apparmor_parser"
+[   53.212561] audit: type=1400 audit(1785185071.281:54): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.mesa-2404.hook.connect-plug-kernel-gpu-2404" pid=3855 comm="apparmor_parser"
+[   53.344833] audit: type=1400 audit(1785185071.413:55): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.prompting-client.hook.configure" pid=3862 comm="apparmor_parser"
+[   53.732783] kauditd_printk_skb: 7 callbacks suppressed
+[   53.732791] audit: type=1400 audit(1785185071.801:63): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.desktop-security-center.hook.configure" pid=3872 comm="apparmor_parser"
+[   53.742237] audit: type=1400 audit(1785185071.810:64): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.ubuntu-desktop-bootstrap" pid=3873 comm="apparmor_parser"
+[   53.784023] audit: type=1400 audit(1785185071.852:65): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.snap-store.show-updates" pid=3868 comm="apparmor_parser"
+[   53.792406] audit: type=1400 audit(1785185071.861:66): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.snap-store.snap-store" pid=3869 comm="apparmor_parser"
+[   53.809036] audit: type=1400 audit(1785185071.877:67): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.desktop-security-center" pid=3870 comm="apparmor_parser"
+[   53.819221] audit: type=1400 audit(1785185071.887:68): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.snap-store.packagekit-session-installer" pid=3867 comm="apparmor_parser"
+[   53.906127] audit: type=1400 audit(1785185071.974:69): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.desktop-security-center.desktop-security-center" pid=3871 comm="apparmor_parser"
+[   53.950500] audit: type=1400 audit(1785185072.019:70): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.snapd-desktop-integration.hook.configure" pid=3875 comm="apparmor_parser"
+[   53.964677] audit: type=1400 audit(1785185072.033:71): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.thunderbird.hook.configure" pid=3878 comm="apparmor_parser"
+[   54.008645] audit: type=1400 audit(1785185072.077:72): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.thunderbird.hook.install" pid=3879 comm="apparmor_parser"
+[   72.271723] kauditd_printk_skb: 19 callbacks suppressed
+[   72.271730] audit: type=1400 audit(1785185090.340:92): apparmor="DENIED" operation="open" class="file" profile="snap.thunderbird.hook.install" name="/var/lib/snapd/hostfs/usr/share/hunspell/" pid=4470 comm="find" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[   79.518151] Bluetooth: RFCOMM TTY layer initialized
+[   79.518172] Bluetooth: RFCOMM socket layer initialized
+[   79.518180] Bluetooth: RFCOMM ver 1.11
+[   85.294107] block nvme0n1: the capability attribute has been deprecated.
+[   88.627570] msm_dpu ae01000.display-controller: [drm:adreno_request_fw [msm]] loaded qcom/gen71500_sqe.fw from new location
+[   88.628200] msm_dpu ae01000.display-controller: [drm:adreno_request_fw [msm]] loaded qcom/gen71500_gmu.bin from new location
+[   88.630927] [drm] Loaded GMU firmware v4.6.4
+[   88.649680] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[   88.649708] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[   88.659805] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[   89.305991] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[   89.306047] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[   89.316167] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[   89.339082] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[   89.339117] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[   89.349214] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[   89.371869] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[   89.371897] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[   89.381945] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[   93.815638] rfkill: input handler disabled
+[   94.537003] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[   94.537061] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[   94.547189] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[   98.864589] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[   98.864647] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[   98.874706] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[   99.039493] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[   99.039554] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[   99.049661] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  225.632087] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  225.632148] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  225.642287] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  225.686445] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  225.686492] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  225.696531] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  225.715873] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  225.715899] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  225.725943] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  225.901062] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  225.901109] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  225.911216] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  225.931290] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  225.931315] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  225.941374] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  225.961399] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  225.961421] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  225.971541] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  225.991437] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  225.991459] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  226.001497] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  226.418959] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  226.419007] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  226.429050] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  226.455231] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  226.455273] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  226.465326] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  226.485666] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  226.485690] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  226.495742] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  226.515663] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  226.515685] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  226.525729] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  226.544687] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  226.544709] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  226.554835] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  226.574650] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  226.574671] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  226.584710] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  226.604593] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  226.604616] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  226.614740] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  226.637722] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  226.637775] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  226.647842] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  226.670218] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  226.670261] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  226.680314] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  226.870094] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  226.870150] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  226.880274] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  226.906595] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  226.906639] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  226.916740] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  226.942972] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  226.943015] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  226.953068] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  226.975922] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  226.975962] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  226.986057] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  227.004935] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  227.004958] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  227.015049] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  227.034355] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  227.034377] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  227.044430] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  227.064160] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  227.064182] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  227.074223] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  227.100175] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  227.100218] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  227.110329] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  227.134609] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  227.134652] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  227.144742] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  227.167581] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  227.167624] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  227.177735] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  227.201957] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  227.202001] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  227.212058] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  227.231934] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  227.231956] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  227.242048] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  227.264980] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  227.265023] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  227.275056] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  227.298786] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  227.298829] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  227.308949] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.275625] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.275682] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.285750] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.306421] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.306454] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.316509] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.338782] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.338813] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.348850] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.373878] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.373915] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.383954] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.403126] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.403154] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.413199] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.434319] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.434342] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.444386] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.465892] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.465936] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.476054] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.498972] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.499013] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.509055] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.532987] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.533031] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.543153] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.564574] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.564596] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.574635] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.593764] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.593786] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.603918] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.627589] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.627644] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.637746] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.661615] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.661658] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.671702] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.694160] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.694205] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.704322] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.725103] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.725158] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.735191] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.756287] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.756331] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.766418] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.811908] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.811954] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.822013] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.850278] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.850319] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.860432] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.887854] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.887899] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.897942] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.920728] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.920771] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.930882] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.951025] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.951068] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.961194] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  398.981213] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  398.981241] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  398.991359] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  399.010519] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  399.010562] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  399.020617] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  399.045432] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  399.045476] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  399.055523] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  399.077466] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  399.077491] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  399.087529] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  399.107877] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  399.107902] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  399.117938] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  399.139964] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  399.139986] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  399.150041] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  399.168962] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  399.168988] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  399.179029] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  399.201759] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  399.201802] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  399.211849] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  399.235172] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  399.235194] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  399.245320] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  452.911857] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  452.911914] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  452.921952] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  452.942315] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  452.942360] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  452.952439] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  452.972908] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  452.972939] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  452.983012] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.005473] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.005515] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.015572] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.035516] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.035544] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.045625] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.065600] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.065622] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.075670] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.095577] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.095600] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.105694] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.129543] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.129584] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.139632] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.159882] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.159907] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.169956] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.190308] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.190353] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.200391] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.219608] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.219643] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.229686] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.249626] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.249648] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.259733] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.279596] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.279618] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.289748] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.308607] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.308629] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.318736] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.342148] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.342201] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.352276] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.375839] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.375882] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.385932] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.428068] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.428116] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.438224] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.464426] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.464470] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.474517] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.502039] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.502079] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.512132] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.535654] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.535689] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.545729] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.568546] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.568570] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.578600] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.599064] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.599085] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.609143] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.629322] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.629344] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.639428] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.665590] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.665627] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.675697] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.699673] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.699717] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.709846] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.730232] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.730255] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.740299] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.760443] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.760465] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.770505] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.790798] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.790820] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.800858] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.824437] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.824459] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.834551] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  453.856456] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  453.856499] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  453.866629] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  555.617230] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  555.617286] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  555.627328] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  555.647845] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  555.647875] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  555.657924] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  555.678099] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  555.678124] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  555.688229] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  555.710493] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  555.710537] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  555.720652] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  555.740630] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  555.740653] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  555.750743] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  555.770987] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  555.771009] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  555.781056] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  555.800947] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  555.800975] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  555.811037] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  555.834878] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  555.834918] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  555.845061] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  555.865348] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  555.865392] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  555.875520] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  555.895916] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  555.895945] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  555.906051] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  555.925087] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  555.925110] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  555.935168] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  555.957094] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  555.957117] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  555.967158] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  555.987256] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  555.987278] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  555.997328] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  556.017486] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  556.017508] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  556.027589] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  556.050201] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  556.050256] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  556.060292] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  556.079340] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  556.079384] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  556.089432] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  556.131169] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  556.131216] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  556.141336] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  556.166870] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  556.166912] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  556.176951] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  556.202580] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  556.202620] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  556.212739] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  556.235474] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  556.235509] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  556.245631] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  556.265562] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  556.265584] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  556.275658] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  556.295542] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  556.295585] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  556.305626] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  556.325512] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  556.325556] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  556.335593] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  556.359309] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  556.359349] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  556.369397] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  556.389737] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  556.389761] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  556.399839] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  556.419033] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  556.419055] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  556.429161] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  556.449113] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  556.449141] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  556.459237] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  556.479032] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  556.479054] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  556.489131] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  556.508002] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  556.508025] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  556.518084] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  556.538155] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  556.538198] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  556.548320] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.045957] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.046016] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.056058] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.075640] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.075668] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.085713] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.106096] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.106124] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.116227] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.139614] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.139657] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.149754] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.168819] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.168863] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.178950] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.198858] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.198902] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.208956] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.228881] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.228903] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.238958] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.262912] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.262952] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.273013] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.292372] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.292401] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.302529] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.322830] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.322854] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.332943] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.352984] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.353006] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.363102] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.383167] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.383195] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.393249] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.413164] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.413208] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.423284] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.443246] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.443290] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.453374] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.474617] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.474669] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.484724] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.506720] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.506767] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.516899] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.559630] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.559681] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.569820] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.599152] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.599197] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.609312] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.635609] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.635652] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.645750] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.669636] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.669679] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.679736] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.698679] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.698701] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.708743] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.727995] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.728038] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.738161] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.758518] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.758540] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.768645] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.791468] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.791508] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.801552] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.821765] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.821791] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.831843] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.851984] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.852008] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.862140] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.882260] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.882283] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.892330] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.913232] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.913254] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.923296] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.942448] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.942470] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.952511] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[  650.972516] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[  650.972537] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[  650.982637] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[ 1244.668266] usb 3-2: new SuperSpeed USB device number 3 using xhci-hcd
+[ 1244.681701] usb 3-2: New USB device found, idVendor=03f0, idProduct=3e07, bcdDevice= 1.10
+[ 1244.681711] usb 3-2: New USB device strings: Mfr=2, Product=3, SerialNumber=4
+[ 1244.681713] usb 3-2: Product: x755W
+[ 1244.681714] usb 3-2: Manufacturer: hp
+[ 1244.681715] usb 3-2: SerialNumber: 38078511
+[ 1244.683277] usb-storage 3-2:1.0: USB Mass Storage device detected
+[ 1244.683576] scsi host1: usb-storage 3-2:1.0
+[ 1244.965987] adreno 3d00000.gpu: [drm:zap_shader_load_mdt [msm]] *ERROR* Unable to load qcom/x1p42100/ASUSTeK/vivobook-s14/qcdxkmsucpurwa.mbn
+[ 1244.966047] msm_dpu ae01000.display-controller: [drm:adreno_load_gpu [msm]] *ERROR* gpu hw init failed: -2
+[ 1244.976126] platform 3d6a000.gmu: [drm:a6xx_gmu_set_oob [msm]] *ERROR* Timeout waiting for GMU OOB set GPU_SET: 0x0
+[ 1245.735735] scsi 1:0:0:0: Direct-Access     hp       x755w            0000 PQ: 0 ANSI: 6
+[ 1245.738660] sd 1:0:0:0: Attached scsi generic sg1 type 0
+[ 1245.745386] sd 1:0:0:0: [sdb] 122880000 512-byte logical blocks: (62.9 GB/58.6 GiB)
+[ 1245.745717] sd 1:0:0:0: [sdb] Write Protect is off
+[ 1245.745720] sd 1:0:0:0: [sdb] Mode Sense: 23 00 00 00
+[ 1245.745849] sd 1:0:0:0: [sdb] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[ 1245.777292]  sdb: sdb1
+[ 1245.777405] sd 1:0:0:0: [sdb] Attached SCSI removable disk
