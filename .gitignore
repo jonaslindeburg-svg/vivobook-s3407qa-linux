@@ -4,3 +4,4 @@ firmware/
 *.bin
 linux/
 linux-x1e80100-zenbook-a14/
+dts/x1p42100-asus-vivobook-s14.dtb
