@@ -36,3 +36,6 @@ hw2.1 files are symlinks to hw2.0 — extract from hw2.0, install to hw2.1.
 The chip reports chip_id 0x12 (=18), board_id 0xff (=255).
 Verified working: correct MAC from BDF, both bands scan.
 Remaining harmless error: "failed to process regulatory info -22".
+
+linux-firmware (Jul 2026) ships WCN6855/hw2.0/nfa765/ with amss.bin and
+m3.bin but no board-2.bin, so this workaround is still required.
