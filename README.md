@@ -1,6 +1,6 @@
 # Linux on the ASUS Vivobook S14 (S3407QA)
 
-Device tree and notes for running Linux on the ASUS Vivobook S 14 S3407QA —
+Device tree and notes for running Linux on the ASUS Vivobook S 14 S3407QA:
 Snapdragon X (X1P-42-100 / "Purwa"), ARM64, Copilot+ PC.
 
 There is no upstream device tree for this model. The closest mainline file is
@@ -23,10 +23,10 @@ Tested on Ubuntu 26.04.1 (resolute), kernel 7.0.0-31-generic.
 | HDMI (Parade PS185HDM bridge) | works |
 | Audio: speakers, headphones, jack detect | works |
 | Bluetooth | works |
-| Wi-Fi (WCN6855) | works ~3 boots in 5 — see below |
+| Wi-Fi (WCN6855) | works ~3 boots in 5, see below |
 | Microphone | device present, captures silence |
 | CPU thermal throttling | measurement only, no passive trip points |
-| Fan control | none — firmware/EC only |
+| Fan control | none, firmware/EC only |
 | Webcam | not working |
 
 ## Wi-Fi: intermittent
@@ -40,7 +40,7 @@ There is no runtime recovery: `qcom-pcie` sets `suppress_bind_attrs`, so the
 controller cannot be rebound. Only a reboot helps.
 
 `ath11k_pci` is blacklisted on the kernel command line and loaded late by a
-systemd unit — probing it early caused unbootable systems.
+systemd unit. Probing it early caused unbootable systems.
 
 Board file: see `wifi/board-2-fallback.md`.
 
@@ -59,8 +59,19 @@ Install to `/lib/firmware/updates/qcom/x1p42100/ASUSTeK/vivobook-s14/`:
     make ARCH=arm64 qcom/x1p42100-asus-vivobook-s14.dtb
 
 `dts/base/` holds the includes this was built against. `reference/` holds
-mainline snapshots for comparison — they are NOT the build inputs and differ
+mainline snapshots for comparison. They are NOT the build inputs and differ
 (see `notes/provenance.md5`).
+
+## Before you start
+
+This modifies your Windows boot configuration. Save your BitLocker
+recovery key to your Microsoft account and somewhere offline first.
+Changing boot settings can trigger a recovery prompt, and without the key
+the Windows partition is unrecoverable.
+
+Everything here is provided as-is. A wrong DTB fails to boot and falls
+back to Windows, but you are editing your own firmware boot entries and
+should understand what `bcdedit` does before running it.
 
 ## Booting
 
@@ -68,7 +79,7 @@ Kernel command line:
 
     quiet splash arm64.nopauth cma=128M efi=noruntime modprobe.blacklist=ath11k_pci
 
-The DTB must be loaded with GRUB's `devicetree` command **before** `linux` —
+The DTB must be loaded with GRUB's `devicetree` command **before** `linux`.
 Ubuntu's `10_linux` emits it after `initrd`, which does not work. Use a custom
 entry in `/etc/grub.d/40_custom`:
 
