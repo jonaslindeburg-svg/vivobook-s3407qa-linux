@@ -1,0 +1,13 @@
+# dts/base/ — build inputs, Ubuntu linux-qcom-x1e tree (Makefile 7.2.3,
+# changelog 7.0.0-22.22 questing; parent git repo lost, no commit hash)
+e693059a1d1820c0a738e4780dae7266  dts/base/hamoa-pmics.dtsi
+45ac5b62483e9d9d28f021c89eba849c  dts/base/hamoa.dtsi
+5c207a6d8d71bea79335ef7642589537  dts/base/purwa.dtsi
+35f7d038b2a5795e0d7ae762677bf9b1  dts/base/x1-asus-vivobook-s15.dtsi
+
+# reference/ — mainline snapshots fetched by hand, Sep 2026, for comparison only
+# NOT the files the DTB is built from; purwa.dtsi here has iris/videocc that base/ lacks
+fc19a001c2de9ab515e73fa4054de119  reference/purwa.dtsi
+240619e9423399acccc20fe953454dc9  reference/running-pre-hdmi.dts
+57311d8becd2cd363bd255f61dd0f81c  reference/x1-asus-vivobook-s15.dtsi
+d99e4bf89c197161e1853b450001eeaa  reference/x1p42100-asus-vivobook-s15.dts
